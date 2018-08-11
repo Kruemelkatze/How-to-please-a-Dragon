@@ -9,7 +9,10 @@ public class Pile : SceneSingleton<Pile>
     private Vector3 _moveTargetDefault;
     private Vector3 _velocity = Vector3.zero;
 
-    public float Level = 0;
+    public int MaxLevel = 10000;
+    public int Level = 2000;
+
+    public float FillingPercentage => (float) Level / MaxLevel;
     public GameObject MoveTarget;
 
     public float MaxHeightOffset = 10;
@@ -33,7 +36,7 @@ public class Pile : SceneSingleton<Pile>
     {
         var newMoveTargetPos = new Vector3(
             MoveTarget.transform.position.x,
-            _moveTargetDefault.y + Level / 100f * MaxHeightOffset + MinHeightOffset,
+            _moveTargetDefault.y + FillingPercentage * MaxHeightOffset + MinHeightOffset,
             MoveTarget.transform.position.z
         );
 
@@ -48,18 +51,18 @@ public class Pile : SceneSingleton<Pile>
         }
     }
 
-    public void Add(float amount)
+    public void Add(int amount)
     {
-        float realSum = Level + amount;
-        Level = Math.Min(100, realSum);
-        
-        if (realSum > 100)
+        int realSum = Level + amount;
+        Level = Math.Min(MaxLevel, realSum);
+
+        if (realSum > MaxLevel)
         {
             GameManager.Instance.PileFull();
         }
     }
 
-    public float Subtract(float amount)
+    public float Subtract(int amount)
     {
         if (amount > Level)
         {
@@ -67,7 +70,7 @@ public class Pile : SceneSingleton<Pile>
         }
 
         Level -= amount;
-        
+
         // Returns the amount that was subtracted
         return amount;
     }
