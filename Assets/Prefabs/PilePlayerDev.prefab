@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172106616949176}
   - component: {fileID: 212275037906935868}
+  - component: {fileID: 114462871088962108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -501,6 +502,17 @@ MonoBehaviour:
   MoveTarget: {fileID: 1824418763275278}
   MaxHeightOffset: 10
   MinHeightOffset: 0
+--- !u!114 &114462871088962108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061524912764442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0038a839e61ea2f4c93229b4f3e619fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212231968751638964
 SpriteRenderer:
   m_ObjectHideFlags: 1
