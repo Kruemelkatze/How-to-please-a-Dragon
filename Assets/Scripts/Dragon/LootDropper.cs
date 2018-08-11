@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LootDropper : MonoBehaviour
+public class LootDropper : SceneSingleton<LootDropper>
 {
     public GameObject Dropping;
     public int DropAmount = 200;
