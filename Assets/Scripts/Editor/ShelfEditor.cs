@@ -9,19 +9,32 @@ namespace Assets.Scripts.Editor
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-        
-            ShelfManager myScript = (ShelfManager)target;
+
+            if (!EditorApplication.isPlaying)
+                return;
+
+            ShelfManager myScript = (ShelfManager) target;
             var amount = EditorGUILayout.IntField("Amount to Edit", 20);
-            
-            if(GUILayout.Button("+ Amount"))
+
+            if (GUILayout.Button("+ Amount"))
             {
                 myScript.Add(amount);
-            }	
-		
-            if(GUILayout.Button("- Amount"))
+            }
+
+            if (GUILayout.Button("- Amount"))
             {
                 myScript.Subtract(amount);
-            }	
+            }
+
+            if (GUILayout.Button("Get Left Shelf"))
+            {
+                myScript.SelectLeft();
+            }
+
+            if (GUILayout.Button("Get Right Shelf"))
+            {
+                myScript.SelectRight();
+            }
         }
     }
 }

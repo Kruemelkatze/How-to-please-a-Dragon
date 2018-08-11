@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class ShelfManager : SceneSingleton<ShelfManager>
 {
-    public Shelf Selected;
-    public int SelectedIndex;
+    private ShelfDisplay Selected;
+    private int SelectedIndex;
 
     public List<ShelfDisplay> Shelves;
 
@@ -17,7 +17,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         SelectedIndex = 0;
         if (Shelves.Count > 0)
         {
-            Selected = Shelves[SelectedIndex].Shelf;
+            Selected = Shelves[SelectedIndex];
         }
     }
 
@@ -29,12 +29,12 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     public int Add(int amount)
     {
         var sum = Selected.CurrentAmount + amount;
-        Selected.CurrentAmount = Math.Min(Selected.TotalAmount, sum);
+        Selected.CurrentAmount = Math.Min(Selected.Shelf.TotalAmount, sum);
 
-        if (sum < Selected.TotalAmount)
+        if (sum < Selected.Shelf.TotalAmount)
             return 0;
 
-        return sum - Selected.TotalAmount;
+        return sum - Selected.Shelf.TotalAmount;
     }
 
     public void Subtract(int amount)
@@ -51,7 +51,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     {
         if (SelectedIndex > 0)
         {
-            Selected = Shelves[--SelectedIndex].Shelf;
+            Selected = Shelves[--SelectedIndex];
         }
     }
 
@@ -59,7 +59,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     {
         if (SelectedIndex < Shelves.Count - 1)
         {
-            Selected = Shelves[++SelectedIndex].Shelf;
+            Selected = Shelves[++SelectedIndex];
         }
     }
 }

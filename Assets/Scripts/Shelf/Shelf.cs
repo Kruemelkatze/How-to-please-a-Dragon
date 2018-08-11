@@ -7,20 +7,15 @@ namespace Assets.Scripts.Shelf
 	{
 
 		public string ShelfName;
-
-		public int TotalAmount;
-
-		public int CurrentAmount;
+		public int TotalAmount = 1;
 
 		public Sprite Frame;
-		
 		public Sprite Filling;
-		
 		public Sprite Background;
-
+		
 		public void PrintInfo()
 		{
-			Debug.Log($"Shelfname: {ShelfName}, TotalAmount: ${TotalAmount}, CurrentAmount${CurrentAmount}");
+			Debug.Log($"Shelfname: {ShelfName}, TotalAmount: ${TotalAmount}");
 		}
 		
 	}
