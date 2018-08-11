@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Shelf;
+using UnityEditor;
 using UnityEngine;
 
 public class ShelfManager : SceneSingleton<ShelfManager>
@@ -10,7 +11,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
 
     public SpriteRenderer Selection;
     private Vector3 selectionPosition;
-    
+
     private int SelectedIndex;
 
     public List<ShelfDisplay> Shelves;
@@ -67,6 +68,31 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         {
             Selected = Shelves[++SelectedIndex];
             Selection.transform.position = Selected.Frame.transform.position;
+        }
+    }
+
+    public void UpgradeShelf(int index, int upgrade)
+    {
+        Shelf shelf = null;
+        switch (upgrade)
+        {
+            case 0:
+                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/BasicShelf.asset", typeof(Shelf)) as Shelf;
+                break;
+            case 1:
+                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade1Shelf.asset", typeof(Shelf)) as Shelf;
+                break;
+            case 2:
+                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade2Shelf.asset", typeof(Shelf)) as Shelf;
+                break;
+            case 3:
+                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade3Shelf.asset", typeof(Shelf)) as Shelf;
+                break;
+        }
+
+        if (shelf != null)
+        {
+            Shelves[index].Shelf = shelf;
         }
     }
 }
