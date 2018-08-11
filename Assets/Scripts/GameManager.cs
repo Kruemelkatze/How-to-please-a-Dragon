@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class GameManager : SceneSingleton<GameManager>
 {
+    public delegate void VoidEvent();
+
+    public event VoidEvent OnGameEnd;
+
     public bool CanShovel = true;
     public bool DragonCanCarry = true;
 
@@ -18,15 +22,18 @@ public class GameManager : SceneSingleton<GameManager>
     {
     }
 
-    void OnGameEnd()
+    void EndGame()
     {
+        Debug.Log("Game Ended");
         CanShovel = false;
         DragonCanCarry = false;
+
+        OnGameEnd?.Invoke();
     }
 
     public void PileFull()
     {
         Debug.Log("PILE FULL.");
-        OnGameEnd();
+        EndGame();
     }
 }
