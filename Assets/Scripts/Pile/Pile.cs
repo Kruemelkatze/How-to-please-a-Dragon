@@ -6,6 +6,10 @@ public class Pile : SceneSingleton<Pile>
 {
 
 	public float Level { get; set; } = 0;
+	public Transform MoveTarget { get; set; }
+
+	public float MaxHeightOffset { get; set; } = 4;
+	public float MinHeightOffset { get; set; } = 0;
 
 	// Use this for initialization
 	void Start () {
