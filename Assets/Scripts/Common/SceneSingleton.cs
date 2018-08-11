@@ -8,6 +8,11 @@
 
         void Awake()
         {
+            SetInstance();
+        }
+
+        protected void SetInstance()
+        {
             _instance = GetComponent<T>();
         }
     }
