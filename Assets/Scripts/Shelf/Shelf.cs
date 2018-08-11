@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Shelf : MonoBehaviour {
-	
-	// How full the shelf is
-	public float Level { get; set; } = 0;
+namespace Assets.Scripts.Shelf
+{
+	[CreateAssetMenu(fileName = "new shelf", menuName = "Shelf")]
+	public class Shelf : ScriptableObject
+	{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+		public string ShelfName;
+
+		public int TotalAmount;
+
+		public int CurrentAmount;
+
+		public Sprite artwork;
 	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
