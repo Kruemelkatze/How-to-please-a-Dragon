@@ -12,7 +12,16 @@ namespace Assets.Scripts.Shelf
 
 		public int CurrentAmount;
 
-		public Sprite artwork;
-	
+		public Sprite Frame;
+		
+		public Sprite Filling;
+		
+		public Sprite Background;
+
+		public void PrintInfo()
+		{
+			Debug.Log($"Shelfname: {ShelfName}, TotalAmount: ${TotalAmount}, CurrentAmount${CurrentAmount}");
+		}
+		
 	}
 }
