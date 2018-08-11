@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +46,29 @@ public class Pile : SceneSingleton<Pile>
             MoveTarget.transform.position =
                 Vector3.SmoothDamp(MoveTarget.transform.position, newMoveTargetPos, ref _velocity, SmoothTime);
         }
+    }
 
+    public void Add(float amount)
+    {
+        float realSum = Level + amount;
+        Level = Math.Min(100, realSum);
+        
+        if (realSum > 100)
+        {
+            GameManager.Instance.PileFull();
+        }
+    }
+
+    public float Subtract(float amount)
+    {
+        if (amount < Level)
+        {
+            amount = Level;
+        }
+
+        Level -= amount;
+        
+        // Returns the amount that was subtracted
+        return amount;
     }
 }
