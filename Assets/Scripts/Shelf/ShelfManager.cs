@@ -7,6 +7,10 @@ using UnityEngine;
 public class ShelfManager : SceneSingleton<ShelfManager>
 {
     private ShelfDisplay Selected;
+
+    public SpriteRenderer Selection;
+    private Vector3 selectionPosition;
+    
     private int SelectedIndex;
 
     public List<ShelfDisplay> Shelves;
@@ -18,6 +22,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (Shelves.Count > 0)
         {
             Selected = Shelves[SelectedIndex];
+            Selection.transform.position = Selected.Frame.transform.position;
         }
     }
 
@@ -52,6 +57,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (SelectedIndex > 0)
         {
             Selected = Shelves[--SelectedIndex];
+            Selection.transform.position = Selected.Frame.transform.position;
         }
     }
 
@@ -60,6 +66,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (SelectedIndex < Shelves.Count - 1)
         {
             Selected = Shelves[++SelectedIndex];
+            Selection.transform.position = Selected.Frame.transform.position;
         }
     }
 }
