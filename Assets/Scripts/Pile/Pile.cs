@@ -61,7 +61,7 @@ public class Pile : SceneSingleton<Pile>
 
     public float Subtract(float amount)
     {
-        if (amount < Level)
+        if (amount > Level)
         {
             amount = Level;
         }
