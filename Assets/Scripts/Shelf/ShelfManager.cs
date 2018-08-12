@@ -77,16 +77,16 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         switch (upgrade)
         {
             case 0:
-                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/BasicShelf.asset", typeof(Shelf)) as Shelf;
+                shelf = Resources.Load<Shelf>("Shelf/BasicShelf");
                 break;
             case 1:
-                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade1Shelf.asset", typeof(Shelf)) as Shelf;
+                shelf = Resources.Load<Shelf>("Shelf/Upgrade1Shelf");
                 break;
             case 2:
-                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade2Shelf.asset", typeof(Shelf)) as Shelf;
+                shelf = Resources.Load<Shelf>("Shelf/Upgrade2Shelf");
                 break;
             case 3:
-                shelf = AssetDatabase.LoadAssetAtPath("Assets/Scripts/Shelf/Upgrade3Shelf.asset", typeof(Shelf)) as Shelf;
+                shelf = Resources.Load<Shelf>("Shelf/Upgrade3Shelf");
                 break;
         }
 
