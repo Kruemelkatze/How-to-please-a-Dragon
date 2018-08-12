@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Pile : SceneSingleton<Pile>
 {
+
+    public SpriteMask PileMask;
+    private bool _deathByPile = false;
+    
     public float SmoothTime = 0.3f;
     private Vector3 _moveTargetDefault;
     private Vector3 _velocity = Vector3.zero;
@@ -30,6 +34,7 @@ public class Pile : SceneSingleton<Pile>
     void Update()
     {
         UpdateMoveTarget();
+        IncreasePile();
     }
 
     private void UpdateMoveTarget(bool instantly = false)
@@ -57,6 +62,27 @@ public class Pile : SceneSingleton<Pile>
         Level = Math.Min(MaxLevel, realSum);
 
         if (realSum > MaxLevel)
+        {
+            _deathByPile = true;
+
+            
+        }
+    }
+
+    public void IncreasePile()
+    {
+        if (_deathByPile && MoveTarget.transform.localScale.x < 15)
+        {
+            var newScale = new Vector3 (0.25F, 0.25F, 0);
+            float speed = 2.0F;
+            PileMask.transform.localScale += newScale;
+            MoveTarget.transform.localScale = Vector3.Lerp (MoveTarget.transform.localScale, (MoveTarget.transform.localScale + newScale), speed * Time.deltaTime);
+            
+            MoveTarget.transform.position =
+                Vector3.SmoothDamp(MoveTarget.transform.position, (MoveTarget.transform.position + new Vector3(0, 1, 0)), ref _velocity, SmoothTime);
+        }
+
+        if (MoveTarget.transform.localScale.x >= 15)
         {
             GameManager.Instance.PileFull();
         }

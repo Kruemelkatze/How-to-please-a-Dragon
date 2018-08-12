@@ -10,11 +10,11 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem ParticleSystem;
     public int shovelSoundCount = 4;
     public Animator Animator;
+    public Vector3 OffsetThrow;
     
 
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class PlayerScript : MonoBehaviour
             var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2;
             var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
 
-            throwScript.SetTrajectory(transform.position, shelfPosition);
+            throwScript.SetTrajectory((transform.position + OffsetThrow), shelfPosition);
         }
     }
 
