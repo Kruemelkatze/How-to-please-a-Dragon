@@ -44,7 +44,6 @@ public class Throw : MonoBehaviour
     {
         if (other.CompareTag("Shelf"))
         {
-            Debug.Log("Hit shelf");
             Destroy(this.gameObject);
         }
     }
