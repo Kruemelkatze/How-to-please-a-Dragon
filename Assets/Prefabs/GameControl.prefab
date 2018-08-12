@@ -68,6 +68,8 @@ MonoBehaviour:
       value: {fileID: 8300000, guid: 2ea2e3de1d6f71f4f8c5258f843b0099, type: 3}
     - name: shovel4
       value: {fileID: 8300000, guid: dd9026c2fcbabba4b839572e72642e03, type: 3}
+    - name: shovel_ground
+      value: {fileID: 8300000, guid: 58bb6b9541f346a4e915769e78d568f0, type: 3}
   MusicClips:
     values: []
   DefaultMusic: 

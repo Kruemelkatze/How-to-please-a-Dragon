@@ -60,11 +60,14 @@ public class PlayerScript : MonoBehaviour
             var throwStuff = GameObject.Instantiate(ThrowStuff);
             var throwScript = throwStuff.GetComponent<Throw>();
 
-            var shelfTransform = ShelfManager.Instance.Selected.transform;
+            var shelfTransform = ShelfManager.Instance.Selected.transform; 
             var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2;
             var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
 
             throwScript.SetTrajectory(transform.position, shelfPosition);
+        } else
+        {
+            AudioControl.Instance.PlaySound("shovel_ground",0.3f);
         }
     }
 
@@ -72,6 +75,6 @@ public class PlayerScript : MonoBehaviour
     {
         // Number of available shovel sounds
         String shovelSound = "shovel" + UnityEngine.Random.Range(1, shovelSoundCount + 1); 
-        AudioControl.Instance.PlaySound(shovelSound);
+        AudioControl.Instance.PlaySound(shovelSound, 0.2f);
     }
 }
