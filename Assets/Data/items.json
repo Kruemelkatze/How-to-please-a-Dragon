@@ -48,6 +48,7 @@
         {
             "Type": "Misc",
             "Id": "crown",
+            "Level": 4,
             "Name": "Golden crown",
             "Description": "A golden crown of a long lost butcher.",
             "Chance": 1,

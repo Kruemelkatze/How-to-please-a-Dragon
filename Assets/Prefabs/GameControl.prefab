@@ -54,7 +54,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelAnimation: {fileID: 0}
+  ItemNameText: {fileID: 0}
+  ItemDescriptionText: {fileID: 0}
+  RageIncreaseText: {fileID: 0}
   StopTimeOnModal: 0
+  RageIncreaseTexts:
+  - If I take this, the dragon will hardly notice.
+  - The dragon may wonder, where this piece went missing.
+  - The dragon will definitely notice if this went missing.
+  RageIncreaseColors:
+  - {r: 0.5647059, g: 0.34901962, b: 0.1254902, a: 1}
+  - {r: 0.35686275, g: 0.21960784, b: 0.09803922, a: 1}
+  - {r: 0.7058824, g: 0.11764706, b: 0.14117648, a: 1}
+  LevelColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.0761527, g: 0, b: 0.4433962, a: 1}
+  - {r: 0.6132076, g: 0, b: 0.5372353, a: 1}
+  - {r: 1, g: 0.4099965, b: 0, a: 1}
 --- !u!114 &114657372704840776
 MonoBehaviour:
   m_ObjectHideFlags: 1

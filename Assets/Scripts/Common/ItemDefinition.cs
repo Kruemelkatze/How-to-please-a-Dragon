@@ -8,7 +8,7 @@ public class ItemDefinition
     public string Description;
     public int Chance;
     public float RageIncrease;
-    public int? Level;
+    public int Level;
 }
 
 public enum ItemType

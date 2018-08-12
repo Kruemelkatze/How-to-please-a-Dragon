@@ -26,5 +26,11 @@ public class PileEditor : Editor
             var actualSubtracted = myScript.Subtract(_amount);
             Debug.Log("Subtracted " + actualSubtracted);
         }
+        
+        if (GUILayout.Button("Set Random Loot"))
+        {
+            var loot = LootDropper.Instance.GetRandomItem();
+            myScript.SetLoot(loot);
+        }
     }
 }

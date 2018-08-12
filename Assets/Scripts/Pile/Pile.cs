@@ -108,10 +108,18 @@ public class Pile : SceneSingleton<Pile>
 
     public void SetLoot(ItemDefinition loot)
     {
-        ContainedLoot = loot;
-        AudioControl.Instance.PlaySound("loot");
-        Debug.Log("Loot added to Pile");
+        if (loot == null || string.IsNullOrEmpty(loot.Type))
+            return;
+        
+        // Ignore loot if it is null or if modal is already open
+        if (GameManager.Instance.DefaultPlayerActionsActive)
+        {
+            ContainedLoot = loot;
+            AudioControl.Instance.PlaySound("loot");
+            Debug.Log("Loot added to Pile");
 
-        LootManager.Instance.ShowModal(ItemModalDelay);
+            LootManager.Instance.ShowModal(ItemModalDelay);
+        }
+        
     }
 }
