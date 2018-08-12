@@ -27,8 +27,8 @@ public class PlayerScript : MonoBehaviour
         {
             int removeAmount = 100;
 
-            Pile.Instance.Subtract(removeAmount);
-            var addAmount = ShelfManager.Instance.Add(removeAmount);
+            
+            var addAmount = ShelfManager.Instance.Add(Pile.Instance.Subtract(removeAmount));
             if (addAmount > 0)
             {
                 Pile.Instance.Add(addAmount);

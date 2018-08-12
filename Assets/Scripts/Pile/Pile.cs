@@ -62,7 +62,7 @@ public class Pile : SceneSingleton<Pile>
         }
     }
 
-    public float Subtract(int amount)
+    public int Subtract(int amount)
     {
         if (amount > Level)
         {
