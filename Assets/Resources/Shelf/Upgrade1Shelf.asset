@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShelfName: Upgrade1Shelf
   TotalAmount: 2000
-  Frame: {fileID: 21300000, guid: a0d9b1b2bb886d9459226f80f7e5db5d, type: 3}
-  Filling: {fileID: 21300000, guid: f1197bb933b1b5845ae97c6158dd3c48, type: 3}
-  Background: {fileID: 0}
+  Frame: {fileID: 21300000, guid: 6796d04bb3fa07f4eb65dcf2a741a52f, type: 3}
+  Filling: {fileID: 21300000, guid: 485091f027944e840b3946679bcc5236, type: 3}
+  Background: {fileID: 21300000, guid: ea4e6473adfc3cc4fa34497e355696b6, type: 3}

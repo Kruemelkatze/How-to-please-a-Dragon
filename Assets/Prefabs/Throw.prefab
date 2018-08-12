@@ -94,8 +94,9 @@ MonoBehaviour:
   TargetPosition: {x: 0, y: 0, z: 0}
   Height: 5
   CompletionTime: 1
+  CoindropSoundCount: 3
   RandomAngularVelocity: 45
-  TargetTrajectoryOffset: {x: 0, y: -0.5, z: 0}
+  TargetTrajectoryOffset: {x: 0, y: -1, z: 0}
 --- !u!212 &212889884641032932
 SpriteRenderer:
   m_ObjectHideFlags: 1

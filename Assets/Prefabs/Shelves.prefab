@@ -461,7 +461,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329942386013970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4101182681030546}
@@ -514,8 +514,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251832946821728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: -2.5, z: 0}
-  m_LocalScale: {x: 1.13, y: 1.04, z: 1}
+  m_LocalPosition: {x: -11, y: -2.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4939500239873828}
   m_RootOrder: 0
@@ -527,7 +527,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1668458927117184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4885992479141832}
@@ -554,7 +554,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298436438777664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4498329624417126}
@@ -568,7 +568,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964747358671448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4912393084760982}
@@ -808,7 +808,7 @@ MonoBehaviour:
   Filling: {fileID: 212219612959025276}
   Background: {fileID: 212884555344966414}
   CurrentAmount: 0
-  MaxHeightOffset: 7.2
+  MaxHeightOffset: 7.5
   SmoothTime: 0.3
 --- !u!114 &114201965385188904
 MonoBehaviour:
@@ -826,7 +826,7 @@ MonoBehaviour:
   Filling: {fileID: 212875545040823504}
   Background: {fileID: 212791009959790184}
   CurrentAmount: 0
-  MaxHeightOffset: 7.2
+  MaxHeightOffset: 7.5
   SmoothTime: 0.3
 --- !u!114 &114915421193881734
 MonoBehaviour:
@@ -844,7 +844,7 @@ MonoBehaviour:
   Filling: {fileID: 212668519058196024}
   Background: {fileID: 212429102370822168}
   CurrentAmount: 0
-  MaxHeightOffset: 7.2
+  MaxHeightOffset: 7.5
   SmoothTime: 0.3
 --- !u!114 &114940816775325820
 MonoBehaviour:
@@ -862,7 +862,7 @@ MonoBehaviour:
   Filling: {fileID: 212898363736213804}
   Background: {fileID: 212714528178221630}
   CurrentAmount: 0
-  MaxHeightOffset: 7.2
+  MaxHeightOffset: 7.5
   SmoothTime: 0.3
 --- !u!212 &212175637471873668
 SpriteRenderer:
@@ -988,11 +988,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a0d9b1b2bb886d9459226f80f7e5db5d, type: 3}
-  m_Color: {r: 1, g: 0.25490198, b: 1, a: 0.57254905}
+  m_SortingLayerID: -1421066921
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: f2f7c36adcfbddf45ac7fbae0b8a9793, type: 3}
+  m_Color: {r: 0.18431373, g: 0.8745098, b: 0.8862745, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
