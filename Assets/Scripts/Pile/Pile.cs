@@ -21,6 +21,8 @@ public class Pile : SceneSingleton<Pile>
     public float MaxHeightOffset = 10;
     public float MinHeightOffset = 0;
 
+    public ItemDefinition ContainedLoot;
+
     // Use this for initialization
     void Start()
     {
@@ -102,5 +104,12 @@ public class Pile : SceneSingleton<Pile>
 
         // Returns the amount that was subtracted
         return amount;
+    }
+
+    public void SetLoot(ItemDefinition loot)
+    {
+        ContainedLoot = loot;
+        AudioControl.Instance.PlaySound("loot");
+        Debug.Log("Loot added to Pile");
     }
 }
