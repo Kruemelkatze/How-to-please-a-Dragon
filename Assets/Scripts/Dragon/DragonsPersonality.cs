@@ -137,7 +137,6 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
             var isCorrectChild = child.gameObject.name.EndsWith(Mood.ToString());
             child.gameObject.SetActive(isCorrectChild);
         }
-
     }
 }
 

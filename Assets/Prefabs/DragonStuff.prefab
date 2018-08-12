@@ -181,6 +181,8 @@ MonoBehaviour:
   DropAmount: 200
   ScaleBaseValue: 200
   ScaleWithValue: 200
+  ItemsFile: {fileID: 4900000, guid: 64a4e278e46f6394089366380542e0af, type: 3}
+  ItemDefinitions: []
 --- !u!114 &114905931126239250
 MonoBehaviour:
   m_ObjectHideFlags: 1

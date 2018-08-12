@@ -435,6 +435,11 @@ Prefab:
       propertyPath: DragonMessagePanel
       value: 
       objectReference: {fileID: 1327573732}
+    - target: {fileID: 114580862073344386, guid: 2e0c2649e4b0a074d9baaef925df850f,
+        type: 2}
+      propertyPath: ItemsFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 64a4e278e46f6394089366380542e0af, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e0c2649e4b0a074d9baaef925df850f, type: 2}
   m_IsPrefabAsset: 0
