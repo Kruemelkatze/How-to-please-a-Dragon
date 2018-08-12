@@ -564,8 +564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShovelAmount: 100
-  ThrowStuff: {fileID: 0}
+  ThrowStuff: {fileID: 1791220193005320, guid: e02d23b577cbfe64c94af9ac9225ab89, type: 2}
   ParticleSystem: {fileID: 198824204421256818}
+  shovelSoundCount: 4
   Animator: {fileID: 95129898060409220}
 --- !u!198 &198824204421256818
 ParticleSystem:

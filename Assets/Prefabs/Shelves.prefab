@@ -785,6 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dc569b34520b94da6129ed081fa863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Selected: {fileID: 0}
   Selection: {fileID: 212423132290710678}
   Shelves:
   - {fileID: 114201965385188904}
