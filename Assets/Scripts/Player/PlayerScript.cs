@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int ShovelAmount = 100;
     public GameObject ThrowStuff;
+    public GameObject Shovel;
     public ParticleSystem ParticleSystem;
     public int shovelSoundCount = 4;
     public Animator Animator;
     public Vector3 OffsetThrow;
-    
 
     void Start()
     {
+        Shovel = GameObject.Instantiate(Shovel);
     }
 
     // Update is called once per frame
@@ -38,7 +38,9 @@ public class PlayerScript : MonoBehaviour
 
     private void Throw()
     {
+        var ShovelAmount = ShovelScript.Instance.ShovelAmount;
         var addAmount = Pile.Instance.Subtract(ShovelAmount);
+        
         if (addAmount > 0)
         {
             var backAmount = ShelfManager.Instance.Add(addAmount);

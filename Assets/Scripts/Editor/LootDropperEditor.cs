@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -17,11 +18,23 @@ public class LootDropperEditor : Editor
 
         LootDropper myScript = (LootDropper) target;
         _amount = EditorGUILayout.IntField("Amount", _amount);
+        
 
         if (GUILayout.Button("Drop"))
         {
             myScript.Drop(_amount);
             Debug.Log("Dropped " + _amount);
+        }
+
+        var totalChance = myScript.ItemDefinitions.Sum(x => x.Chance).ToString();
+        EditorGUILayout.LabelField("Total Weight: ", totalChance);
+
+
+        if (GUILayout.Button("Random Item"))
+        {
+            var item = myScript.GetRandomItem();
+            Debug.Log("Random Item:");
+            Debug.Log(JsonUtility.ToJson(item));
         }
     }
 }

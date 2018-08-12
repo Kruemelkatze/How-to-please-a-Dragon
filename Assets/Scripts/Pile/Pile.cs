@@ -82,9 +82,9 @@ public class Pile : SceneSingleton<Pile>
             float speed = 2.0F;
             PileMask.transform.localScale += newScale;
             MoveTarget.transform.localScale += newScale * speed * Time.deltaTime;
-            MoveTarget.transform.position += new Vector3(0, 2, 0) * speed * Time.deltaTime;
+            MoveTarget.transform.position += new Vector3(0, 1.4F, 0) * speed * Time.deltaTime;
 
-            if (MoveTarget.transform.localScale.x >= 5)
+            if (scale.x < 3 && MoveTarget.transform.localScale.x >= 3)
             {
                 GameManager.Instance.PileFull();
             }

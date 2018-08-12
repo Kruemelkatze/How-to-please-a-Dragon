@@ -1,0 +1,58 @@
+{
+    "Items": [
+        {
+            "Type": "ShelfUpgrade",
+            "Id": "shelfupgrade2",
+            "Level": 1,
+            "Name": "Shelf Level 2",
+            "Description": "A generic Level 2 Shelf.",
+            "Chance": 10,
+            "RageIncrease": 20
+        },
+        {
+            "Type": "ShelfUpgrade",
+            "Id": "shelfupgrade3",
+            "Level": 2,
+            "Name": "Shelf Level 3",
+            "Description": "A generic Level 3 Shelf.",
+            "Chance": 5,
+            "RageIncrease": 30
+        },
+        {
+            "Type": "ShelfUpgrade",
+            "Id": "shelfupgrade4",
+            "Level": 3,
+            "Name": "Shelf Level 4",
+            "Description": "A generic Level 4 Shelf.",
+            "Chance": 2,
+            "RageIncrease": 60
+        },
+        {
+            "Type": "ShovelUpgrade",
+            "Id": "shovelupgrade1",
+            "Level": 1,
+            "Name": "Shovel Level 1",
+            "Description": "A leaden shovel.",
+            "Chance": 10,
+            "RageIncrease": 20
+        },
+        {
+            "Type": "ShovelUpgrade",
+            "Id": "shovelupgrade2",
+            "Level": 2,
+            "Name": "Shovel Level 2",
+            "Description": "A golden shovel.",
+            "Chance": 2,
+            "RageIncrease": 60
+        },
+        {
+            "Type": "Misc",
+            "Id": "crown",
+            "Name": "Golden crown",
+            "Description": "A golden crown of a long lost butcher.",
+            "Chance": 1,
+            "Unique": true,
+            "RageIncrease": 80
+        }
+    ]
+}
