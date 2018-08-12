@@ -161,6 +161,7 @@ MonoBehaviour:
   Dimmer: {fileID: 114227586512981190}
   DimmerTimeValue: 0.4
   DragonIsWorking: 0
+  NextArrival: 0
   FlapWaitTime: 3
   FlyOverWaitTime: 0
   ShakeDuration: 1.5
@@ -195,6 +196,7 @@ MonoBehaviour:
   MoodTexts: []
   RageDebugText: {fileID: 0}
   DragonMessagePanel: {fileID: 0}
+  DragonMessageDisplayTime: 4
   Rage: 50
   RageDecreasePerSecond: 0.5
 --- !u!212 &212275150040723370
