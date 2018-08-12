@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class Pile : SceneSingleton<Pile>
 {
-
     public SpriteMask PileMask;
     private bool _deathByPile = false;
-    
+
     public float SmoothTime = 0.3f;
     private Vector3 _moveTargetDefault;
     private Vector3 _velocity = Vector3.zero;
@@ -39,6 +38,11 @@ public class Pile : SceneSingleton<Pile>
 
     private void UpdateMoveTarget(bool instantly = false)
     {
+        if (_deathByPile)
+        {
+            return;
+        }
+
         var newMoveTargetPos = new Vector3(
             MoveTarget.transform.position.x,
             _moveTargetDefault.y + FillingPercentage * MaxHeightOffset + MinHeightOffset,
@@ -64,27 +68,26 @@ public class Pile : SceneSingleton<Pile>
         if (realSum > MaxLevel)
         {
             _deathByPile = true;
-
-            
         }
     }
 
     public void IncreasePile()
     {
-        if (_deathByPile && MoveTarget.transform.localScale.x < 15)
+        
+        var scale = MoveTarget.transform.localScale;
+        
+        if (_deathByPile && scale.x < 5)
         {
-            var newScale = new Vector3 (0.25F, 0.25F, 0);
+            var newScale = new Vector3(0.25F, 0.25F, 0);
             float speed = 2.0F;
             PileMask.transform.localScale += newScale;
-            MoveTarget.transform.localScale = Vector3.Lerp (MoveTarget.transform.localScale, (MoveTarget.transform.localScale + newScale), speed * Time.deltaTime);
-            
-            MoveTarget.transform.position =
-                Vector3.SmoothDamp(MoveTarget.transform.position, (MoveTarget.transform.position + new Vector3(0, 1, 0)), ref _velocity, SmoothTime);
-        }
+            MoveTarget.transform.localScale += newScale * speed * Time.deltaTime;
+            MoveTarget.transform.position += new Vector3(0, 2, 0) * speed * Time.deltaTime;
 
-        if (MoveTarget.transform.localScale.x >= 15)
-        {
-            GameManager.Instance.PileFull();
+            if (MoveTarget.transform.localScale.x >= 5)
+            {
+                GameManager.Instance.PileFull();
+            }
         }
     }
 
