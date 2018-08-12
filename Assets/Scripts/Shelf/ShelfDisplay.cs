@@ -14,6 +14,7 @@ public class ShelfDisplay : MonoBehaviour
 	public SpriteRenderer Background;
 
 	public ParticleSystem FullBurst;
+	public ParticleSystem FullyUpgraded;
 	
 	public int CurrentAmount;
 		

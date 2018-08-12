@@ -35,18 +35,18 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     public int Add(int amount, ShelfDisplay shelf = null)
     {
         shelf = shelf != null ? shelf : Selected;
-        
+
         var sum = shelf.CurrentAmount + amount;
         shelf.CurrentAmount = Math.Min(shelf.Shelf.TotalAmount, sum);
 
         if (sum < shelf.Shelf.TotalAmount)
             return 0;
-        
-        
+
+
         // show particel effect for excess of coins
         var tomuch = sum - shelf.Shelf.TotalAmount;
         shelf.TooMuch(tomuch);
-            
+
         return tomuch;
     }
 
@@ -95,12 +95,16 @@ public class ShelfManager : SceneSingleton<ShelfManager>
             case 3:
                 shelf = Resources.Load<Shelf>("Shelf/Upgrade3Shelf");
                 break;
-            
         }
+        
 
         if (shelf != null)
         {
             Shelves[index].Shelf = shelf;
+            if (upgrade == 3)
+            {
+                Shelves[index].FullyUpgraded.Play();
+            }
         }
     }
 }

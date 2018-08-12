@@ -488,25 +488,30 @@ Prefab:
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 145302993}
+    - target: {fileID: 198529591653167426, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
+        type: 2}
+      propertyPath: CollisionModule.plane0
+      value: 
+      objectReference: {fileID: 145302993}
     - target: {fileID: 198025154344393674, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
         type: 2}
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 145302993}
-    - target: {fileID: 198529591653167426, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
+    - target: {fileID: 199505889993302086, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
         type: 2}
-      propertyPath: CollisionModule.enabled
-      value: 1
+      propertyPath: m_SortingLayerID
+      value: 1891144315
       objectReference: {fileID: 0}
-    - target: {fileID: 198529591653167426, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
+    - target: {fileID: 199505889993302086, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
         type: 2}
-      propertyPath: CollisionModule.plane0
-      value: 
-      objectReference: {fileID: 145302993}
-    - target: {fileID: 198529591653167426, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 199505889993302086, guid: 813d54e637a2ea24e8cb78934a0dc9e0,
         type: 2}
-      propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0.2
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 813d54e637a2ea24e8cb78934a0dc9e0, type: 2}
