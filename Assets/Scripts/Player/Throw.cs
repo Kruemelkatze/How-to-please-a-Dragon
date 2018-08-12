@@ -20,6 +20,9 @@ public class Throw : MonoBehaviour
 
     public Vector3 TargetTrajectoryOffset;
 
+    public int Amount;
+    public ShelfDisplay TargetShelf;
+
     // Use this for initialization
     void Start()
     {
@@ -37,7 +40,8 @@ public class Throw : MonoBehaviour
             AnimationTime = Math.Min(AnimationTime, CompletionTime);
 
             _rigidbody2D.position =
-                MathParabola.Parabola(StartPosition, TargetPosition + TargetTrajectoryOffset, Height, AnimationTime / CompletionTime);
+                MathParabola.Parabola(StartPosition, TargetPosition + TargetTrajectoryOffset, Height,
+                    AnimationTime / CompletionTime);
         }
     }
 
@@ -50,10 +54,12 @@ public class Throw : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-
         if (other.CompareTag("Shelf"))
         {
+            var backAmount = ShelfManager.Instance.Add(Amount, TargetShelf);
+            if (backAmount > 0)
+                Pile.Instance.Add(backAmount);
+
             // Pick a random sound for the coins dropping into the shelf
             String coindropSound = "coindrop" + UnityEngine.Random.Range(1, CoindropSoundCount + 1);
             AudioControl.Instance.PlaySound(coindropSound, 0.2f);

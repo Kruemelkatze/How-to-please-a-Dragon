@@ -32,15 +32,17 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     {
     }
 
-    public int Add(int amount)
+    public int Add(int amount, ShelfDisplay shelf = null)
     {
-        var sum = Selected.CurrentAmount + amount;
-        Selected.CurrentAmount = Math.Min(Selected.Shelf.TotalAmount, sum);
+        shelf = shelf != null ? shelf : Selected;
+        
+        var sum = shelf.CurrentAmount + amount;
+        shelf.CurrentAmount = Math.Min(shelf.Shelf.TotalAmount, sum);
 
-        if (sum < Selected.Shelf.TotalAmount)
+        if (sum < shelf.Shelf.TotalAmount)
             return 0;
 
-        return sum - Selected.Shelf.TotalAmount;
+        return sum - shelf.Shelf.TotalAmount;
     }
 
     public void Subtract(int amount)

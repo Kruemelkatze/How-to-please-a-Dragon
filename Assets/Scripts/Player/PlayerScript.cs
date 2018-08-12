@@ -43,10 +43,6 @@ public class PlayerScript : MonoBehaviour
         
         if (addAmount > 0)
         {
-            var backAmount = ShelfManager.Instance.Add(addAmount);
-            if (backAmount > 0)
-                Pile.Instance.Add(backAmount);
-
             Animator.SetTrigger("PlayerShoveling");
             PlayShovelSound();
             var burst = ParticleSystem.emission.GetBurst(0);
@@ -61,8 +57,10 @@ public class PlayerScript : MonoBehaviour
 
             var throwStuff = GameObject.Instantiate(ThrowStuff);
             var throwScript = throwStuff.GetComponent<Throw>();
+            throwScript.Amount = addAmount;
+            throwScript.TargetShelf = ShelfManager.Instance.Selected;
 
-            var shelfTransform = ShelfManager.Instance.Selected.transform;
+            var shelfTransform = throwScript.TargetShelf.transform;
             var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2;
             var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
 
