@@ -47,6 +47,7 @@ public class ShelfDisplay : MonoBehaviour
 
 	public void TooMuch(int amount)
 	{
+		amount = amount / 2;
 		var burst = FullBurst.emission.GetBurst(0);
 		burst.minCount = (short) (amount);
 		burst.maxCount = (short) (amount);
