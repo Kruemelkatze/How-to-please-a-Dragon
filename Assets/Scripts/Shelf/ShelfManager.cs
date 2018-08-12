@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ShelfManager : SceneSingleton<ShelfManager>
 {
-    private ShelfDisplay Selected;
+    public ShelfDisplay Selected;
 
     public SpriteRenderer Selection;
     private Vector3 selectionPosition;

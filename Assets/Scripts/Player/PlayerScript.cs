@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public int ShovelAmount = 100;
+    public GameObject ThrowStuff;
+
     // Use this for initialization
     void Start()
     {
@@ -25,14 +28,29 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int removeAmount = 100;
-
-            
-            var addAmount = ShelfManager.Instance.Add(Pile.Instance.Subtract(removeAmount));
-            if (addAmount > 0)
-            {
-                Pile.Instance.Add(addAmount);
-            }
+            Throw();
         }
+    }
+
+    private void Throw()
+    {
+        var addAmount = ShelfManager.Instance.Add(Pile.Instance.Subtract(ShovelAmount));
+        if (addAmount > 0)
+        {
+            Pile.Instance.Add(addAmount);
+        }
+
+        // Instantiate Throw object
+        if (ThrowStuff == null)
+            return;
+        
+        var throwStuff = GameObject.Instantiate(ThrowStuff);
+        var throwScript = throwStuff.GetComponent<Throw>();
+
+        var shelfTransform = ShelfManager.Instance.Selected.transform;
+        var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y /2;
+        var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
+
+        throwScript.SetTrajectory(transform.position, shelfPosition);
     }
 }
