@@ -12,6 +12,8 @@ public class ShelfDisplay : MonoBehaviour
 	public SpriteRenderer Frame;
 	public SpriteRenderer Filling;
 	public SpriteRenderer Background;
+
+	public ParticleSystem FullBurst;
 	
 	public int CurrentAmount;
 		
@@ -31,6 +33,8 @@ public class ShelfDisplay : MonoBehaviour
 		Filling.sprite = Shelf.Filling;
 		Background.sprite = Shelf.Background;
 		
+//		FullBurst.transform.position = Filling.gameObject.transform.position;
+
 		// set init pos
 		var initPos = new Vector3(
 			x: Filling.gameObject.transform.position.x,
@@ -39,6 +43,15 @@ public class ShelfDisplay : MonoBehaviour
 		);
 		Filling.gameObject.transform.position = initPos;
 		_moveTargetDefault = initPos;
+	}
+
+	public void TooMuch(int amount)
+	{
+		var burst = FullBurst.emission.GetBurst(0);
+		burst.minCount = (short) (amount);
+		burst.maxCount = (short) (amount);
+		FullBurst.emission.SetBurst(0, burst);
+		FullBurst.Play();
 	}
 	
 	private void UpdateFillingPoisition(bool instantly = false)
