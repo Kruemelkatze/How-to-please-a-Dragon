@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Throw : MonoBehaviour
 {
@@ -15,11 +16,16 @@ public class Throw : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     public int CoindropSoundCount = 3;
+    public float RandomAngularVelocity = 5;
+
+    public Vector3 TargetTrajectoryOffset;
 
     // Use this for initialization
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        var velocity = Random.Range(-RandomAngularVelocity, RandomAngularVelocity) / 2;
+        _rigidbody2D.angularVelocity = velocity + Math.Sign(velocity) * RandomAngularVelocity / 2;
     }
 
     // Update is called once per frame
@@ -31,7 +37,7 @@ public class Throw : MonoBehaviour
             AnimationTime = Math.Min(AnimationTime, CompletionTime);
 
             _rigidbody2D.position =
-                MathParabola.Parabola(StartPosition, TargetPosition, Height, AnimationTime / CompletionTime);
+                MathParabola.Parabola(StartPosition, TargetPosition + TargetTrajectoryOffset, Height, AnimationTime / CompletionTime);
         }
     }
 
