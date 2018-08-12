@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject ThrowStuff;
     public ParticleSystem ParticleSystem;
 
+    public Animator Animator;
+
     // Use this for initialization
     void Start()
     {
@@ -43,12 +45,13 @@ public class PlayerScript : MonoBehaviour
             if (backAmount > 0)
                 Pile.Instance.Add(backAmount);
 
+            Animator.SetTrigger("PlayerShoveling");
+            
             var burst = ParticleSystem.emission.GetBurst(0);
             burst.minCount = (short) (ShovelAmount / 50);
             burst.maxCount = (short) (ShovelAmount / 20);
             ParticleSystem.emission.SetBurst(0, burst);
             ParticleSystem.Play();
-
 
             // Instantiate Throw object
             if (ThrowStuff == null)
