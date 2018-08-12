@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -63,6 +64,12 @@ public class LootDropper : SceneSingleton<LootDropper>
         drop.transform.localScale = new Vector3(scale, scale, scale);
     }
 
+    public ItemDefinition GetRandomItem()
+    {
+        int index = GetRandomWeightedIndex(ItemDefinitions.Select(x => x.Chance).ToArray());
+        return ItemDefinitions[index];
+    }
+
     // A courtesy of https://forum.unity.com/threads/random-numbers-with-a-weighted-chance.442190/
     private int GetRandomWeightedIndex(int[] weights)
     {
@@ -102,7 +109,7 @@ class ItemFileContent
 [System.Serializable]
 public class ItemDefinition
 {
-    internal string Type;
+    public string Type;
     public ItemType ItemType;
     public string Id;
     public string Name;
