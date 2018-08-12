@@ -7,14 +7,13 @@ public class PlayerScript : MonoBehaviour
 {
     public GameObject ThrowStuff;
     public GameObject Shovel;
-    public ParticleSystem ParticleSystem;
+    public ParticleSystem DeflectedGold;
     public int shovelSoundCount = 4;
     public Animator Animator;
     public Vector3 OffsetThrow;
 
     void Start()
     {
-        Shovel = GameObject.Instantiate(Shovel);
     }
 
     // Update is called once per frame
@@ -45,11 +44,11 @@ public class PlayerScript : MonoBehaviour
         {
             Animator.SetTrigger("PlayerShoveling");
             PlayShovelSound();
-            var burst = ParticleSystem.emission.GetBurst(0);
+            var burst = DeflectedGold.emission.GetBurst(0);
             burst.minCount = (short) (ShovelAmount / 50);
             burst.maxCount = (short) (ShovelAmount / 20);
-            ParticleSystem.emission.SetBurst(0, burst);
-            ParticleSystem.Play();
+            DeflectedGold.emission.SetBurst(0, burst);
+            DeflectedGold.Play();
 
             // Instantiate Throw object
             if (ThrowStuff == null)

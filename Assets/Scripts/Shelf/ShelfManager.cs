@@ -41,8 +41,13 @@ public class ShelfManager : SceneSingleton<ShelfManager>
 
         if (sum < shelf.Shelf.TotalAmount)
             return 0;
-
-        return sum - shelf.Shelf.TotalAmount;
+        
+        
+        // show particel effect for excess of coins
+        var tomuch = sum - shelf.Shelf.TotalAmount;
+        shelf.TooMuch(tomuch);
+            
+        return tomuch;
     }
 
     public void Subtract(int amount)
