@@ -8,6 +8,8 @@ public class LootDrop : MonoBehaviour
     public float DropSpeed = 5;
     public int Amount = 2000;
 
+    public ItemDefinition Loot;
+
     private Rigidbody2D _rigid2D;
 
     // Use this for initialization
@@ -15,6 +17,11 @@ public class LootDrop : MonoBehaviour
     {
         _rigid2D = GetComponent<Rigidbody2D>();
         _rigid2D.velocity = Vector2.down * DropSpeed;
+    }
+
+    public void Init()
+    {
+        // For additional setups
     }
 
     // Update is called once per frame
@@ -28,6 +35,11 @@ public class LootDrop : MonoBehaviour
             return;
 
         Pile.Instance.Add(Amount);
+        if (Loot != null)
+        {
+            Pile.Instance.SetLoot(Loot);
+        }
+
         Destroy(this.gameObject);
     }
 }

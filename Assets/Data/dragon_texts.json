@@ -1,14 +1,23 @@
 {
     "Friendly": [
         "Oh, you so shiny. I'll eat you last.",
-        "It was a good idea to kidna.. hire you."
+        "It was a good idea to kidna.. hire you.",
+        "You shovel well, my human friend.",
+        "Honest human, you don't steal.",
+        "You look hobbity - good."
     ],
     "Normal": [
-        "Wörk wörk wörk",
-        "I tell you, I'm an honest dragon."
+        "Keep working, do not let me down.",
+        "I tell you, I'm an honest dragon.",
+        "Could have sworn there was a crown between all this gold",
+        "Afrain from stealing my stuff, human",
+        "Never laugh at live dragons, I am serious!"
     ],
     "Angry": [
         "Grahhhhh!",
-        "I'll let you live. For now..."
+        "I'll let you live. For now...",
+        "You worm, I'll swallow you!",
+        "You are testing my patience!",
+        "Come not between the dragon, and his wrath."
     ]
 }

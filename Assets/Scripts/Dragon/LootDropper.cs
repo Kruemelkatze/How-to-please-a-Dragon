@@ -15,11 +15,13 @@ public class LootDropper : SceneSingleton<LootDropper>
     public bool ScaleWithValue = true;
 
     public TextAsset ItemsFile;
-
     public ItemDefinition[] ItemDefinitions;
+
+    public float LootDropPercentage = 50;
 
     void Awake()
     {
+        SetInstance();
         LoadItems();
     }
 
@@ -57,11 +59,20 @@ public class LootDropper : SceneSingleton<LootDropper>
         var lootDropScript = drop.GetComponent<LootDrop>();
         lootDropScript.Amount = amount;
 
-        if (!ScaleWithValue)
-            return;
+        if (ScaleWithValue)
+        {
+            var scale = (float) DropAmount / ScaleBaseValue;
+            drop.transform.localScale = new Vector3(scale, scale, scale);
+        }
+        
+        if (Random.Range(0f, 100f) <= LootDropPercentage)
+        {
+            lootDropScript.Loot = GetRandomItem();
+            Debug.Log("Dropped loot!");
+            Debug.Log(JsonUtility.ToJson(lootDropScript.Loot));
+        }
 
-        var scale = (float) DropAmount / ScaleBaseValue;
-        drop.transform.localScale = new Vector3(scale, scale, scale);
+        lootDropScript.Init();
     }
 
     public ItemDefinition GetRandomItem()
@@ -104,24 +115,4 @@ public class LootDropper : SceneSingleton<LootDropper>
 class ItemFileContent
 {
     public ItemDefinition[] Items;
-}
-
-[System.Serializable]
-public class ItemDefinition
-{
-    public string Type;
-    public ItemType ItemType;
-    public string Id;
-    public string Name;
-    public string Description;
-    public int Chance;
-    public float RageIncrease;
-    public int? Level;
-}
-
-public enum ItemType
-{
-    ShelfUpgrade,
-    ShovelUpgrade,
-    Misc
 }
