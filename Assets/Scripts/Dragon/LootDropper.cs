@@ -15,11 +15,13 @@ public class LootDropper : SceneSingleton<LootDropper>
     public bool ScaleWithValue = true;
 
     public TextAsset ItemsFile;
-
     public ItemDefinition[] ItemDefinitions;
+
+    public float LootDropPercentage = 50;
 
     void Awake()
     {
+        SetInstance();
         LoadItems();
     }
 
