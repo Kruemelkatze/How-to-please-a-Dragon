@@ -55,7 +55,7 @@ MonoBehaviour:
   SoundClips:
     values:
     - name: flap
-      value: {fileID: 8300000, guid: aa7e406b763b30c48bc1de26353daca9, type: 3}
+      value: {fileID: 8300000, guid: 75a304edba69ead41befcb9238e60dae, type: 3}
     - name: flyover
       value: {fileID: 8300000, guid: 8c36bb985c18f5b4d92b6b542c313272, type: 3}
     - name: coins
@@ -70,6 +70,12 @@ MonoBehaviour:
       value: {fileID: 8300000, guid: dd9026c2fcbabba4b839572e72642e03, type: 3}
     - name: shovel_ground
       value: {fileID: 8300000, guid: 58bb6b9541f346a4e915769e78d568f0, type: 3}
+    - name: coindrop1
+      value: {fileID: 8300000, guid: d7c6d23040370cc4baedaa2c63784b7e, type: 3}
+    - name: coindrop2
+      value: {fileID: 8300000, guid: 06707f5a962337e4e9ae8f40997367aa, type: 3}
+    - name: coindrop3
+      value: {fileID: 8300000, guid: b0d378b855ed0234d8934b619b3e1ffe, type: 3}
   MusicClips:
     values: []
   DefaultMusic: 

@@ -14,6 +14,8 @@ public class Throw : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
 
+    public int CoindropSoundCount = 3;
+
     // Use this for initialization
     void Start()
     {
@@ -42,8 +44,13 @@ public class Throw : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
+
         if (other.CompareTag("Shelf"))
         {
+            // Pick a random sound for the coins dropping into the shelf
+            String coindropSound = "coindrop" + UnityEngine.Random.Range(1, CoindropSoundCount + 1);
+            AudioControl.Instance.PlaySound(coindropSound, 0.2f);
             Destroy(this.gameObject);
         }
     }
