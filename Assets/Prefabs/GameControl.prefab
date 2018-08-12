@@ -61,13 +61,15 @@ MonoBehaviour:
     - name: coins
       value: {fileID: 8300000, guid: 029ff9697750c684bad3926bfd629bcb, type: 3}
     - name: shovel1
-      value: {fileID: 8300000, guid: 25dcae0100340584fb0f564590bd86f9, type: 3}
+      value: {fileID: 8300000, guid: 72b59b3599df12c48a8c78ef2fdfd989, type: 3}
     - name: shovel2
       value: {fileID: 8300000, guid: b561b1714694c4f4fa992a4a31726d3d, type: 3}
     - name: shovel3
       value: {fileID: 8300000, guid: 2ea2e3de1d6f71f4f8c5258f843b0099, type: 3}
     - name: shovel4
       value: {fileID: 8300000, guid: dd9026c2fcbabba4b839572e72642e03, type: 3}
+    - name: shovel_ground
+      value: {fileID: 8300000, guid: 58bb6b9541f346a4e915769e78d568f0, type: 3}
   MusicClips:
     values: []
   DefaultMusic: 
