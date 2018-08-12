@@ -25,6 +25,16 @@ public class DragonsPersonalityEditor : Editor
         {
             myScript.AddRage(_amount);
             Debug.Log("Added Rage: " + _amount);
-        }    
+        }  
+        
+        if (GUILayout.Button("LoadTexts"))
+        {
+            myScript.LoadTexts();
+        }
+        
+        if (GUILayout.Button("GetRandomText"))
+        {
+            Debug.Log(myScript.GetRandomText());
+        }  
     }
 }

@@ -698,6 +698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rage: 50
   RageDecreasePerSecond: 0.5
+  TextFile: {fileID: 4900000, guid: e55ca1a0db6f86845859134f46a62627, type: 3}
   RageDebugText: {fileID: 150583009}
 --- !u!1 &2090357501
 GameObject:
