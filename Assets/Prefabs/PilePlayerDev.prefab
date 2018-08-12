@@ -568,6 +568,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 198824204421256818}
   shovelSoundCount: 4
   Animator: {fileID: 95129898060409220}
+  OffsetThrow: {x: -1, y: 0, z: 0}
 --- !u!198 &198824204421256818
 ParticleSystem:
   m_ObjectHideFlags: 1
