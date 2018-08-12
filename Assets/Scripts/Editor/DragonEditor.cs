@@ -23,11 +23,5 @@ public class DragonEditor : Editor
 			myScript.BringBackLoot(_amount);
 			Debug.Log("Brought back loot: " + _amount);
 		}
-		
-		if (GUILayout.Button("Flyover"))
-		{
-			myScript.Dimmer.Dim();
-			Debug.Log("Brought back loot: " + _amount);
-		}
 	}
 }

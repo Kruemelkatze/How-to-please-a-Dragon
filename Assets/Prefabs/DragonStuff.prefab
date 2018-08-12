@@ -161,6 +161,7 @@ MonoBehaviour:
   Dimmer: {fileID: 114227586512981190}
   DimmerTimeValue: 0.4
   DragonIsWorking: 0
+  NextArrival: 0
   FlapWaitTime: 3
   FlyOverWaitTime: 0
   ShakeDuration: 1.5
@@ -180,6 +181,8 @@ MonoBehaviour:
   DropAmount: 200
   ScaleBaseValue: 200
   ScaleWithValue: 200
+  ItemsFile: {fileID: 4900000, guid: 64a4e278e46f6394089366380542e0af, type: 3}
+  ItemDefinitions: []
 --- !u!114 &114905931126239250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,11 +194,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19029859ffab4de7a5c4e1cc443cd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rage: 50
-  RageDecreasePerSecond: 0.5
-  RageDebugText: {fileID: 0}
   TextFile: {fileID: 4900000, guid: e55ca1a0db6f86845859134f46a62627, type: 3}
   MoodTexts: []
+  RageDebugText: {fileID: 0}
+  DragonMessagePanel: {fileID: 0}
+  DragonMessageDisplayTime: 4
+  Rage: 50
+  RageDecreasePerSecond: 0.5
 --- !u!212 &212275150040723370
 SpriteRenderer:
   m_ObjectHideFlags: 1
