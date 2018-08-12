@@ -9,7 +9,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject ThrowStuff;
     public ParticleSystem ParticleSystem;
     public int shovelSoundCount = 4;
-   
+    public Animator Animator;
+    
 
     void Start()
     {
@@ -31,7 +32,6 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PlayShovelSound();
             Throw();
         }
     }
@@ -45,12 +45,13 @@ public class PlayerScript : MonoBehaviour
             if (backAmount > 0)
                 Pile.Instance.Add(backAmount);
 
+            Animator.SetTrigger("PlayerShoveling");
+            PlayShovelSound();
             var burst = ParticleSystem.emission.GetBurst(0);
             burst.minCount = (short) (ShovelAmount / 50);
             burst.maxCount = (short) (ShovelAmount / 20);
             ParticleSystem.emission.SetBurst(0, burst);
             ParticleSystem.Play();
-
 
             // Instantiate Throw object
             if (ThrowStuff == null)
