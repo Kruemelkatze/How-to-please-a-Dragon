@@ -61,7 +61,7 @@ MonoBehaviour:
     - name: coins
       value: {fileID: 8300000, guid: 029ff9697750c684bad3926bfd629bcb, type: 3}
     - name: shovel1
-      value: {fileID: 8300000, guid: 25dcae0100340584fb0f564590bd86f9, type: 3}
+      value: {fileID: 8300000, guid: 72b59b3599df12c48a8c78ef2fdfd989, type: 3}
     - name: shovel2
       value: {fileID: 8300000, guid: b561b1714694c4f4fa992a4a31726d3d, type: 3}
     - name: shovel3

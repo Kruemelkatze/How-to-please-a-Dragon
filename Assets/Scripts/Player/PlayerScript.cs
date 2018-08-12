@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             ShelfManager.Instance.SelectLeft();
-        }  
+        }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
