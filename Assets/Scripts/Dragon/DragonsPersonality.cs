@@ -1,15 +1,34 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using Random = UnityEngine.Random;
 
 public class DragonsPersonality : SceneSingleton<DragonsPersonality>
 {
-    public float Rage = 50;
+    private bool _debug;
+
+    [Header("Texts")] public TextAsset TextFile;
+
+    public List<TextDefinition> MoodTexts;
+
+    [Header("UI")] public TextMeshProUGUI RageDebugText;
+    public GameObject DragonMessagePanel;
+
+    public float DragonMessageDisplayTime = 4;
+
+    void Awake()
+    {
+        SetInstance();
+        LoadTexts();
+    }
+
+    [Header("Values")] public float Rage = 50;
     public float RageDecreasePerSecond = 0.5f;
 
     public DragonMood Mood
@@ -23,20 +42,6 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
             else
                 return DragonMood.Normal;
         }
-    }
-
-    public TextMeshProUGUI RageDebugText;
-
-    private bool _debug;
-
-    public TextAsset TextFile;
-
-    public List<TextDefinition> MoodTexts;
-
-    void Awake()
-    {
-        SetInstance();
-        LoadTexts();
     }
 
     public void LoadTexts()
@@ -98,6 +103,41 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
 
         int i = Random.Range(0, texts.Texts.Length);
         return texts.Texts[i];
+    }
+
+    public void ShowDragonText()
+    {
+        var message = GetRandomText();
+        var anim = DragonMessagePanel.GetComponent<Animation>();
+        anim.Play();
+
+        TextMeshProUGUI currentText;
+        var textWrapper = DragonMessagePanel.transform.Find("Texts");
+        for (int i = 0; i < textWrapper.childCount; i++)
+        {
+            var child = textWrapper.GetChild(i);
+
+            if (child.gameObject.name.EndsWith(Mood.ToString()))
+            {
+                child.gameObject.SetActive(true);
+                currentText = child.GetComponent<TextMeshProUGUI>();
+                currentText.text = message;
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+
+        //Icon
+        var iconWrapper = DragonMessagePanel.transform.Find("Icons");
+        for (int i = 0; i < iconWrapper.childCount; i++)
+        {
+            var child = iconWrapper.GetChild(i);
+            var isCorrectChild = child.gameObject.name.EndsWith(Mood.ToString());
+            child.gameObject.SetActive(isCorrectChild);
+        }
+
     }
 }
 

@@ -14,6 +14,7 @@ public class Dragon : SceneSingleton<Dragon>
     public float DimmerTimeValue = 0.4f;
 
     public bool DragonIsWorking = false;
+    public float NextArrival;
 
     [Header("Timing")] public float FlapWaitTime = 3;
     public float FlyOverWaitTime = 2;
@@ -23,7 +24,7 @@ public class Dragon : SceneSingleton<Dragon>
     // Use this for initialization
     void Start()
     {
-        Invoke(nameof(BringBackLootPeriodic), GetRandomDelay());
+        Invoke(nameof(BringBackLootPeriodic), NextArrival = GetRandomDelay());
         GameManager.Instance.OnGameEnd += StopInvoking;
     }
 
@@ -40,6 +41,10 @@ public class Dragon : SceneSingleton<Dragon>
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.DragonCanCarry)
+        {
+            NextArrival -= Time.deltaTime;
+        }
     }
 
     private float GetRandomDelay()
@@ -65,7 +70,7 @@ public class Dragon : SceneSingleton<Dragon>
             yield return StartCoroutine(DoDragonStuff(amount));
 
         // Invoke next
-        Invoke(nameof(BringBackLootPeriodic), GetRandomDelay());
+        Invoke(nameof(BringBackLootPeriodic), NextArrival = GetRandomDelay());
     }
 
     //For External use
@@ -103,6 +108,9 @@ public class Dragon : SceneSingleton<Dragon>
         Debug.Log("\tDrop Loot");
         AudioControl.Instance.PlaySound("coins");
         LootDropper.Instance.Drop(value);
+
+        //Show Icon
+        DragonsPersonality.Instance.ShowDragonText();
 
         DragonIsWorking = false;
     }
