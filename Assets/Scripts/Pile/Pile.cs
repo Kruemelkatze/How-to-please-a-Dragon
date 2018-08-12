@@ -22,6 +22,7 @@ public class Pile : SceneSingleton<Pile>
     public float MinHeightOffset = 0;
 
     public ItemDefinition ContainedLoot;
+    public float ItemModalDelay = 1.5f;
 
     // Use this for initialization
     void Start()
@@ -75,9 +76,8 @@ public class Pile : SceneSingleton<Pile>
 
     public void IncreasePile()
     {
-        
         var scale = MoveTarget.transform.localScale;
-        
+
         if (_deathByPile && scale.x < 5)
         {
             var newScale = new Vector3(0.25F, 0.25F, 0);
@@ -111,5 +111,7 @@ public class Pile : SceneSingleton<Pile>
         ContainedLoot = loot;
         AudioControl.Instance.PlaySound("loot");
         Debug.Log("Loot added to Pile");
+
+        LootManager.Instance.ShowModal(ItemModalDelay);
     }
 }

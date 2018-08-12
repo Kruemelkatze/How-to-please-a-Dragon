@@ -20,20 +20,24 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (GameManager.Instance.DefaultPlayerActionsActive)
         {
-            ShelfManager.Instance.SelectLeft();
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                ShelfManager.Instance.SelectLeft();
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                ShelfManager.Instance.SelectRight();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Throw();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            ShelfManager.Instance.SelectRight();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Throw();
-        }
     }
 
     private void Throw()
