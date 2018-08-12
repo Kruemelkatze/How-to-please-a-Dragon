@@ -8,8 +8,9 @@ public class PlayerScript : MonoBehaviour
     public int ShovelAmount = 100;
     public GameObject ThrowStuff;
     public ParticleSystem ParticleSystem;
+    public int shovelSoundCount = 4;
+   
 
-    // Use this for initialization
     void Start()
     {
         
@@ -21,7 +22,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             ShelfManager.Instance.SelectLeft();
-        }
+        }  
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -30,6 +31,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            PlayShovelSound();
             Throw();
         }
     }
@@ -63,5 +65,12 @@ public class PlayerScript : MonoBehaviour
 
             throwScript.SetTrajectory(transform.position, shelfPosition);
         }
+    }
+
+    private void PlayShovelSound()
+    {
+        // Number of available shovel sounds
+        String shovelSound = "shovel" + UnityEngine.Random.Range(1, shovelSoundCount + 1); 
+        AudioControl.Instance.PlaySound(shovelSound);
     }
 }
