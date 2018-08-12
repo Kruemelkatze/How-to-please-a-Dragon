@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
 {
     public int ShovelAmount = 100;
     public GameObject ThrowStuff;
+    public ParticleSystem ParticleSystem;
 
     // Use this for initialization
     void Start()
@@ -34,23 +35,28 @@ public class PlayerScript : MonoBehaviour
 
     private void Throw()
     {
-        var addAmount = ShelfManager.Instance.Add(Pile.Instance.Subtract(ShovelAmount));
+        var addAmount = Pile.Instance.Subtract(ShovelAmount);
         if (addAmount > 0)
         {
-            Pile.Instance.Add(addAmount);
+            var backAmount = ShelfManager.Instance.Add(addAmount);
+            if (backAmount > 0)
+                Pile.Instance.Add(backAmount);
+
+            ParticleSystem.Play();
+
+
+            // Instantiate Throw object
+            if (ThrowStuff == null)
+                return;
+
+            var throwStuff = GameObject.Instantiate(ThrowStuff);
+            var throwScript = throwStuff.GetComponent<Throw>();
+
+            var shelfTransform = ShelfManager.Instance.Selected.transform;
+            var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2;
+            var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
+
+            throwScript.SetTrajectory(transform.position, shelfPosition);
         }
-
-        // Instantiate Throw object
-        if (ThrowStuff == null)
-            return;
-        
-        var throwStuff = GameObject.Instantiate(ThrowStuff);
-        var throwScript = throwStuff.GetComponent<Throw>();
-
-        var shelfTransform = ShelfManager.Instance.Selected.transform;
-        var shelfHeight = shelfTransform.gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y /2;
-        var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
-
-        throwScript.SetTrajectory(transform.position, shelfPosition);
     }
 }
