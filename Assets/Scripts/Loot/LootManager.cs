@@ -30,11 +30,13 @@ public class LootManager : SceneSingleton<LootManager>
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 AcceptLoot();
+                Input.ResetInputAxes();
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 DeclineLoot();
+                Input.ResetInputAxes();
             }
         }
     }
@@ -116,7 +118,7 @@ public class LootManager : SceneSingleton<LootManager>
             Time.timeScale = 1;
 
         PanelAnimation.Play("LootModal_out");
-        var animLength = PanelAnimation.GetClip("LootModal_out").length;
+        
         GameManager.Instance.ModalFocus(false);
     }
 }
