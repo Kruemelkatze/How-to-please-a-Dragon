@@ -23,7 +23,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (Shelves.Count > 0)
         {
             Selected = Shelves[SelectedIndex];
-            Selection.transform.position = Selected.Frame.transform.position;
+            Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }
 
@@ -60,7 +60,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (SelectedIndex > 0)
         {
             Selected = Shelves[--SelectedIndex];
-            Selection.transform.position = Selected.Frame.transform.position;
+            Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }
 
@@ -69,7 +69,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
         if (SelectedIndex < Shelves.Count - 1)
         {
             Selected = Shelves[++SelectedIndex];
-            Selection.transform.position = Selected.Frame.transform.position;
+            Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }
 
@@ -90,6 +90,7 @@ public class ShelfManager : SceneSingleton<ShelfManager>
             case 3:
                 shelf = Resources.Load<Shelf>("Shelf/Upgrade3Shelf");
                 break;
+            
         }
 
         if (shelf != null)

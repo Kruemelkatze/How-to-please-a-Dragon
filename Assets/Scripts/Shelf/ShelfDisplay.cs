@@ -17,7 +17,7 @@ public class ShelfDisplay : MonoBehaviour
 		
 	public float FillingPercentage => (float) CurrentAmount / Shelf.TotalAmount;
 	
-	public float MaxHeightOffset = 7.2F;
+	public float MaxHeightOffset = 7.5F;
 		
 	public float SmoothTime = 0.3f;
 	private Vector3 _moveTargetDefault;
@@ -59,10 +59,21 @@ public class ShelfDisplay : MonoBehaviour
 				Vector3.SmoothDamp(Filling.gameObject.transform.position, newMoveTargetPos, ref _velocity, SmoothTime);
 		}
 	}
+
+	void UpdateSprites()
+	{
+		if (Frame.sprite != Shelf.Frame)
+		{
+			Frame.sprite = Shelf.Frame;
+			Filling.sprite = Shelf.Filling;
+			Background.sprite = Shelf.Background;
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
 //		Shelf.PrintInfo();
 		UpdateFillingPoisition();
+		UpdateSprites();
 	}
 }
