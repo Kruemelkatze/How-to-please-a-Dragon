@@ -15,8 +15,7 @@ public class Dragon : SceneSingleton<Dragon>
 
     public bool DragonIsWorking = false;
 
-    [Header("Timing")]
-    public float FlapWaitTime = 3;
+    [Header("Timing")] public float FlapWaitTime = 3;
     public float FlyOverWaitTime = 2;
     public float ShakeDuration = 1.5f;
     public float ShakeWaitDuration = 1.5f;
@@ -28,7 +27,7 @@ public class Dragon : SceneSingleton<Dragon>
         GameManager.Instance.OnGameEnd += StopInvoking;
     }
 
-    private void StopInvoking()
+    private void StopInvoking(GameEndReason reason)
     {
         CancelInvoke(nameof(BringBackLootPeriodic));
     }

@@ -39,19 +39,23 @@ public class DragonsPersonality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rage = Math.Max(0, Rage - RageDecreasePerSecond * Time.deltaTime);
-
-        if (_debug && RageDebugText != null)
+        if (GameManager.Instance.DecreaseRage)
         {
-            RageDebugText.text = $"Rage: {Rage}";
+            Rage = Math.Max(0, Rage - RageDecreasePerSecond * Time.deltaTime);
+
+            if (_debug && RageDebugText != null)
+            {
+                RageDebugText.text = $"Rage: {Rage}";
+            }
         }
     }
 
-    void AddRage(float amount)
+    public void AddRage(float amount)
     {
-        Rage = Math.Max(100, Rage + amount);
+        Rage = Math.Min(100, Rage + amount);
         if (Rage >= 100)
         {
+            GameManager.Instance.DragonRaged();
         }
     }
 }

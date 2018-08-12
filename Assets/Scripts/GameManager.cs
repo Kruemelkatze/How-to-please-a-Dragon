@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class GameManager : SceneSingleton<GameManager>
 {
-    public delegate void VoidEvent();
+    public delegate void GameEndEvent(GameEndReason reason);
 
-    public event VoidEvent OnGameEnd;
+    public event GameEndEvent OnGameEnd;
 
     public bool CanShovel = true;
     public bool DragonCanCarry = true;
+    public bool DecreaseRage = true;
 
     // Use this for initialization
     void Start()
@@ -22,18 +23,31 @@ public class GameManager : SceneSingleton<GameManager>
     {
     }
 
-    void EndGame()
+    void EndGame(GameEndReason reason)
     {
-        Debug.Log("Game Ended");
+        Debug.Log("Game Ended because of " + reason);
         CanShovel = false;
         DragonCanCarry = false;
-
-        OnGameEnd?.Invoke();
+        DecreaseRage = false;
+        
+        OnGameEnd?.Invoke(reason);
     }
 
     public void PileFull()
     {
         Debug.Log("PILE FULL.");
-        EndGame();
+        EndGame(GameEndReason.PileFull);
     }
+
+    public void DragonRaged()
+    {
+        Debug.Log("DRAGON RAGED.");
+        EndGame(GameEndReason.DragonRaged);
+    }
+}
+
+public enum GameEndReason
+{
+    PileFull,
+    DragonRaged
 }
