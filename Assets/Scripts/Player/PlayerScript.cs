@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+
+    public ParticleSystem ParticleSystem;
+    
     // Use this for initialization
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -27,6 +31,8 @@ public class PlayerScript : MonoBehaviour
         {
             int removeAmount = 100;
 
+            ParticleSystem.Play();
+            
             
             var addAmount = ShelfManager.Instance.Add(Pile.Instance.Subtract(removeAmount));
             if (addAmount > 0)
