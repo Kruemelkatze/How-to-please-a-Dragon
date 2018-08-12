@@ -12,6 +12,7 @@ public class GameManager : SceneSingleton<GameManager>
     public bool CanShovel = true;
     public bool DragonCanCarry = true;
     public bool DecreaseRage = true;
+    public bool DefaultPlayerActionsActive = true;
 
     // Use this for initialization
     void Start()
@@ -43,6 +44,11 @@ public class GameManager : SceneSingleton<GameManager>
     {
         Debug.Log("DRAGON RAGED.");
         EndGame(GameEndReason.DragonRaged);
+    }
+
+    public void ModalFocus(bool focus)
+    {
+        DefaultPlayerActionsActive = !focus;
     }
 }
 
