@@ -423,11 +423,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114657372704840776, guid: bd6ada728491dbb4daa9c7901cc91164,
-        type: 2}
-      propertyPath: SoundClips.values.Array.size
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 4029295958081838, guid: bd6ada728491dbb4daa9c7901cc91164, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -480,26 +475,6 @@ Prefab:
       propertyPath: RageIncreaseText
       value: 
       objectReference: {fileID: 567184051}
-    - target: {fileID: 114657372704840776, guid: bd6ada728491dbb4daa9c7901cc91164,
-        type: 2}
-      propertyPath: SoundClips.values.Array.data[11].name
-      value: item_upgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657372704840776, guid: bd6ada728491dbb4daa9c7901cc91164,
-        type: 2}
-      propertyPath: SoundClips.values.Array.data[11].value
-      value: 
-      objectReference: {fileID: 8300000, guid: 55036ffa596697243a0d3de8319dbaae, type: 3}
-    - target: {fileID: 114657372704840776, guid: bd6ada728491dbb4daa9c7901cc91164,
-        type: 2}
-      propertyPath: SoundClips.values.Array.data[10].name
-      value: item_find
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657372704840776, guid: bd6ada728491dbb4daa9c7901cc91164,
-        type: 2}
-      propertyPath: SoundClips.values.Array.data[10].value
-      value: 
-      objectReference: {fileID: 8300000, guid: 826e42cd1b008fb49b788f68e08dd19a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd6ada728491dbb4daa9c7901cc91164, type: 2}
   m_IsPrefabAsset: 0
