@@ -75,7 +75,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
 --- !u!114 &114946603261915364
@@ -94,6 +94,8 @@ MonoBehaviour:
   TargetPosition: {x: 0, y: 0, z: 0}
   Height: 5
   CompletionTime: 1
+  RandomAngularVelocity: 45
+  TargetTrajectoryOffset: {x: 0, y: -0.5, z: 0}
 --- !u!212 &212889884641032932
 SpriteRenderer:
   m_ObjectHideFlags: 1
