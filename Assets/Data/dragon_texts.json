@@ -1,0 +1,14 @@
+{
+    "Friendly": [
+        "Oh, you so shiny. I'll eat you last.",
+        "It was a good idea to kidna.. hire you."
+    ],
+    "Normal": [
+        "Wörk wörk wörk",
+        "I tell you, I'm an honest dragon."
+    ],
+    "Angry": [
+        "Grahhhhh!",
+        "I'll let you live. For now..."
+    ]
+}
