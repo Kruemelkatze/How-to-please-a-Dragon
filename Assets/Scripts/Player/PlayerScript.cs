@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -42,6 +43,10 @@ public class PlayerScript : MonoBehaviour
             if (backAmount > 0)
                 Pile.Instance.Add(backAmount);
 
+            var burst = ParticleSystem.emission.GetBurst(0);
+            burst.minCount = (short) (ShovelAmount / 50);
+            burst.maxCount = (short) (ShovelAmount / 20);
+            ParticleSystem.emission.SetBurst(0, burst);
             ParticleSystem.Play();
 
 
