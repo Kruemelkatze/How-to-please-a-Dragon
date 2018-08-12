@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             ShelfManager.Instance.SelectLeft();
-        }  
+        }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -65,6 +65,9 @@ public class PlayerScript : MonoBehaviour
             var shelfPosition = shelfTransform.position + Vector3.up * shelfHeight;
 
             throwScript.SetTrajectory((transform.position + OffsetThrow), shelfPosition);
+        } else
+        {
+            AudioControl.Instance.PlaySound("shovel_ground",0.3f);
         }
     }
 
@@ -72,6 +75,6 @@ public class PlayerScript : MonoBehaviour
     {
         // Number of available shovel sounds
         String shovelSound = "shovel" + UnityEngine.Random.Range(1, shovelSoundCount + 1); 
-        AudioControl.Instance.PlaySound(shovelSound);
+        AudioControl.Instance.PlaySound(shovelSound, 0.2f);
     }
 }
