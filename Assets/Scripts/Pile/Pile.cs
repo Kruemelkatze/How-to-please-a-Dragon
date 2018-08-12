@@ -115,7 +115,7 @@ public class Pile : SceneSingleton<Pile>
         if (GameManager.Instance.DefaultPlayerActionsActive)
         {
             ContainedLoot = loot;
-            AudioControl.Instance.PlaySound("loot");
+            AudioControl.Instance.PlaySound("item_find");
             Debug.Log("Loot added to Pile");
 
             LootManager.Instance.ShowModal(ItemModalDelay);

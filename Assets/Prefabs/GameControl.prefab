@@ -105,8 +105,10 @@ MonoBehaviour:
       value: {fileID: 8300000, guid: d7c6d23040370cc4baedaa2c63784b7e, type: 3}
     - name: coindrop2
       value: {fileID: 8300000, guid: 06707f5a962337e4e9ae8f40997367aa, type: 3}
-    - name: coindrop3
-      value: {fileID: 8300000, guid: b0d378b855ed0234d8934b619b3e1ffe, type: 3}
+    - name: item_find
+      value: {fileID: 8300000, guid: 826e42cd1b008fb49b788f68e08dd19a, type: 3}
+    - name: item_upgrade
+      value: {fileID: 8300000, guid: 55036ffa596697243a0d3de8319dbaae, type: 3}
   MusicClips:
     values: []
   DefaultMusic: 
