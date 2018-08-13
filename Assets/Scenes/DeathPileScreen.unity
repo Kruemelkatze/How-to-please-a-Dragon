@@ -788,6 +788,7 @@ MonoBehaviour:
   NextSceneIndex: 1
   Transitioning: 0
   Duration: 0.7
+  MinTimeOnScreen: 1
 --- !u!224 &696169891
 RectTransform:
   m_ObjectHideFlags: 0
