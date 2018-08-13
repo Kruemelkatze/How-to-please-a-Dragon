@@ -160,12 +160,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 20218938715386548, guid: 6f06991005ebe9a498f28cf23d63381e,
     type: 2}
   m_PrefabInternal: {fileID: 112417847}
---- !u!114 &466225787 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114100550022410074, guid: ba2fb1f90fad01e458cf56c7b2956b99,
-    type: 2}
-  m_PrefabInternal: {fileID: 1221681426}
-  m_Script: {fileID: 11500000, guid: 327adb1bef78537468642dd19070b456, type: 3}
 --- !u!1001 &618037874
 Prefab:
   m_ObjectHideFlags: 0
@@ -431,16 +425,6 @@ Prefab:
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 2006967874}
-    - target: {fileID: 212275037906935868, guid: ba2fb1f90fad01e458cf56c7b2956b99,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114462871088962108, guid: ba2fb1f90fad01e458cf56c7b2956b99,
-        type: 2}
-      propertyPath: Shovel
-      value: 
-      objectReference: {fileID: 466225787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2fb1f90fad01e458cf56c7b2956b99, type: 2}
   m_IsPrefabAsset: 0
