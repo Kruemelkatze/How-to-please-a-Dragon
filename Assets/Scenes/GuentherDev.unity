@@ -381,6 +381,16 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 112417848}
+    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114841067951211426, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -406,15 +416,25 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 223979075040164950, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1891144315
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 223979075040164950, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
-      propertyPath: m_SortingOrder
-      value: 999
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683, type: 2}
