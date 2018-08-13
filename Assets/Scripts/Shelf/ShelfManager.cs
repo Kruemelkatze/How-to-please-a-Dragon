@@ -98,7 +98,6 @@ public class ShelfManager : SceneSingleton<ShelfManager>
                 shelf = Resources.Load<Shelf>("Shelf/Upgrade3Shelf");
                 break;
         }
-        
 
         if (shelf != null)
         {

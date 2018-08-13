@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ShovelScript : SceneSingleton<ShovelScript>
 {
-    public int ShovelAmount = 50;
+    public int ShovelAmount = 40;
 
     public SpriteRenderer Shovel;
     
     public int ShovelUpgrade = 0;
-    public int[] AmountMap = new[] {50, 100, 200};
+    public int[] AmountMap = new[] {40, 90, 180};
     
     // Use this for initialization
     void Start()

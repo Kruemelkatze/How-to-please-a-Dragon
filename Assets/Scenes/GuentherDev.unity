@@ -160,6 +160,12 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 20218938715386548, guid: 6f06991005ebe9a498f28cf23d63381e,
     type: 2}
   m_PrefabInternal: {fileID: 112417847}
+--- !u!114 &145127690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114100550022410074, guid: ba2fb1f90fad01e458cf56c7b2956b99,
+    type: 2}
+  m_PrefabInternal: {fileID: 1221681426}
+  m_Script: {fileID: 11500000, guid: 327adb1bef78537468642dd19070b456, type: 3}
 --- !u!1001 &618037874
 Prefab:
   m_ObjectHideFlags: 0
@@ -302,6 +308,31 @@ Prefab:
     - target: {fileID: 4308562325723584, guid: efb45768ea28e384981da78b3007ddfa, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 199209716920762794, guid: efb45768ea28e384981da78b3007ddfa,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1891144315
+      objectReference: {fileID: 0}
+    - target: {fileID: 199209716920762794, guid: efb45768ea28e384981da78b3007ddfa,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 198590189399298894, guid: efb45768ea28e384981da78b3007ddfa,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.11764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 198590189399298894, guid: efb45768ea28e384981da78b3007ddfa,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 198590189399298894, guid: efb45768ea28e384981da78b3007ddfa,
+        type: 2}
+      propertyPath: ColorModule.gradient.minGradient.key0.a
+      value: 0.7058824
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb45768ea28e384981da78b3007ddfa, type: 2}
@@ -467,6 +498,11 @@ Prefab:
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 2006967874}
+    - target: {fileID: 114462871088962108, guid: ba2fb1f90fad01e458cf56c7b2956b99,
+        type: 2}
+      propertyPath: Shovel
+      value: 
+      objectReference: {fileID: 145127690}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2fb1f90fad01e458cf56c7b2956b99, type: 2}
   m_IsPrefabAsset: 0
