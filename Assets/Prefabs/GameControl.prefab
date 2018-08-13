@@ -122,8 +122,10 @@ MonoBehaviour:
     - name: dragon_voice2
       value: {fileID: 8300000, guid: df682a322d3a4004e9d03321d86b9f3b, type: 3}
   MusicClips:
-    values: []
-  DefaultMusic: 
+    values:
+    - name: background_game
+      value: {fileID: 8300000, guid: ed298ce94b4ddc84db17a5f4b75e4120, type: 3}
+  DefaultMusic: 0
   IgnoreDuplicateMusic: 1
 --- !u!114 &114713692487674378
 MonoBehaviour:
