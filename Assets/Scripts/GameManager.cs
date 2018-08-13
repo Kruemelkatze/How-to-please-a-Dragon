@@ -23,6 +23,7 @@ public class GameManager : SceneSingleton<GameManager>
     // Use this for initialization
     void Start()
     {
+        AudioControl.Instance.PlayMusic("background_game",0.15f);
     }
 
     // Update is called once per frame
