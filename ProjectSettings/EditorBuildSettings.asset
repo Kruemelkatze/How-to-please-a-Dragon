@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/DragonDeathScene.unity
     guid: c2f30ced5d2eae446bc2afc2df4573ec
   - enabled: 1
-    path: Assets/Scenes/FabianDev.unity
-    guid: 4dbb6ccc70775ba47a9096130c179cc0
-  - enabled: 1
-    path: Assets/Scenes/GuentherDev.unity
-    guid: 55343d5e76c7a844e867804e7534328d
+    path: Assets/Scenes/GameScene.unity
+    guid: 00001b964ff9e5043a8057dea3a58571
   m_configObjects: {}
