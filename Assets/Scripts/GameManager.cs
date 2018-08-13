@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SceneSingleton<GameManager>
 {
@@ -13,6 +11,9 @@ public class GameManager : SceneSingleton<GameManager>
     public bool DragonCanCarry = true;
     public bool DecreaseRage = true;
     public bool DefaultPlayerActionsActive = true;
+
+    public int PileDeathSceneIndex = -1;
+    public int DragonDeathSceneIndex = -1;
 
     // Use this for initialization
     void Start()
@@ -30,8 +31,18 @@ public class GameManager : SceneSingleton<GameManager>
         CanShovel = false;
         DragonCanCarry = false;
         DecreaseRage = false;
-        
+
         OnGameEnd?.Invoke(reason);
+
+        switch (reason)
+        {
+            case GameEndReason.DragonRaged:
+                SceneTransition.TransitionToScene(DragonDeathSceneIndex);
+                break;
+            case GameEndReason.PileFull:
+                SceneTransition.TransitionToScene(PileDeathSceneIndex);
+                break;
+        }
     }
 
     public void PileFull()

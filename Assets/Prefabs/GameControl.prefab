@@ -140,6 +140,8 @@ MonoBehaviour:
   DragonCanCarry: 1
   DecreaseRage: 1
   DefaultPlayerActionsActive: 1
+  PileDeathSceneIndex: 2
+  DragonDeathSceneIndex: 3
 --- !u!114 &114799771823960116
 MonoBehaviour:
   m_ObjectHideFlags: 1

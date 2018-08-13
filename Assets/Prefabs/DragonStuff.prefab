@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7647b249424514d90c66f3cf0fb9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dropping: {fileID: 0}
+  Dropping: {fileID: 1775135093648992, guid: 1cf8950067cbc854dbe6145201175ecf, type: 2}
   DropAmount: 200
   ScaleBaseValue: 200
   ScaleWithValue: 200
@@ -200,6 +200,7 @@ MonoBehaviour:
   RageDebugText: {fileID: 0}
   DragonMessagePanel: {fileID: 0}
   DragonMessageDisplayTime: 4
+  DragonVoiceSampleCount: 3
   Rage: 50
   RageDecreasePerSecond: 0.5
 --- !u!212 &212275150040723370

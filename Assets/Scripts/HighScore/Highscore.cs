@@ -7,6 +7,7 @@ using UnityEngine;
 public class Highscore : SceneSingleton<Highscore>
 {
     public static int TopHighscore;
+    public static int LatestScore;
 
     public int Score;
 
@@ -26,6 +27,7 @@ public class Highscore : SceneSingleton<Highscore>
     void OnGameEnd(GameEndReason reason)
     {
         TopHighscore = Math.Max(TopHighscore, Score);
+        LatestScore = Score;
     }
 
     // Update is called once per frame

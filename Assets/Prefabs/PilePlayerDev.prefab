@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowStuff: {fileID: 1791220193005320, guid: e02d23b577cbfe64c94af9ac9225ab89, type: 2}
-  Shovel: {fileID: 1949500524935732, guid: 2f0301aceb57a21469b75bec9de27bd3, type: 2}
+  Shovel: {fileID: 114100550022410074}
   DeflectedGold: {fileID: 198305124761935752}
   shovelSoundCount: 4
   Animator: {fileID: 95129898060409220}
