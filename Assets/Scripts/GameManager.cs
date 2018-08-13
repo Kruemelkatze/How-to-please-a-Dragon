@@ -17,6 +17,7 @@ public class GameManager : SceneSingleton<GameManager>
 
     private void Awake()
     {
+        SetInstance();
         Cursor.visible = false;
     }
 
