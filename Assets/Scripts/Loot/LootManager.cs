@@ -142,7 +142,7 @@ public class LootManager : SceneSingleton<LootManager>
                 if (shelfIndex >= 0)
                 {
                     ShelfManager.Instance.UpgradeShelf(shelfIndex, item.Level);
-                    AudioControl.Instance.PlaySound("item_upgrade", 0.4f);
+                    AudioControl.Instance.PlaySound("item_upgrade", 0.20f);
                 }
                 else
                 {
@@ -154,7 +154,7 @@ public class LootManager : SceneSingleton<LootManager>
                 if (PlayerScript.Instance.Shovel.ShovelUpgrade < item.Level)
                 {
                     PlayerScript.Instance.UpgradeShovel(item.Level);
-                    AudioControl.Instance.PlaySound("item_upgrade", 0.4f);
+                    AudioControl.Instance.PlaySound("item_upgrade", 0.20f);
                 }
                 else
                 {
