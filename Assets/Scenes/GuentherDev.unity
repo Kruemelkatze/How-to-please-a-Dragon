@@ -399,11 +399,6 @@ Prefab:
       propertyPath: DragonMessagePanel
       value: 
       objectReference: {fileID: 239314743}
-    - target: {fileID: 114469544643379434, guid: 2e0c2649e4b0a074d9baaef925df850f,
-        type: 2}
-      propertyPath: AvgPeriod
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e0c2649e4b0a074d9baaef925df850f, type: 2}
   m_IsPrefabAsset: 0
