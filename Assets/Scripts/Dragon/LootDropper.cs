@@ -19,6 +19,7 @@ public class LootDropper : SceneSingleton<LootDropper>
 
     public float LootDropPercentage = 50;
 
+
     void Awake()
     {
         SetInstance();
@@ -77,7 +78,12 @@ public class LootDropper : SceneSingleton<LootDropper>
 
     public ItemDefinition GetRandomItem()
     {
-        int index = GetRandomWeightedIndex(ItemDefinitions.Select(x => x.Chance).ToArray());
+
+        double ShelfStatus = ShelfManager.Instance.LevelShelfesFull();
+        Debug.Log("ShelfStatus" + ShelfStatus);
+                
+        // If shelves become too full, increase chance to get shelf upgrade items
+        int index = GetRandomWeightedIndex(ItemDefinitions.Select(x => (x.Type == "ShelfUpgrade" && ShelfStatus > 0.8) ? x.Chance * 2 : x.Chance).ToArray());
         return ItemDefinitions[index];
     }
 
