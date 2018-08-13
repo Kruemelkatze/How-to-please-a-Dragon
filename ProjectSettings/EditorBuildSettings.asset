@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: faa93e0f1a02af846bd0f7fae91e54cb
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScene.unity
+    guid: fc95be0733e37974f98171e970a5e1c9
+  - enabled: 1
+    path: Assets/Scenes/DeathPileScreen.unity
+    guid: cfb23a7a22e04af48b841503d06a02c6
+  - enabled: 1
+    path: Assets/Scenes/DragonDeathScene.unity
+    guid: c2f30ced5d2eae446bc2afc2df4573ec
+  - enabled: 1
+    path: Assets/Scenes/FabianDev.unity
+    guid: 4dbb6ccc70775ba47a9096130c179cc0
+  - enabled: 1
     path: Assets/Scenes/GuentherDev.unity
     guid: 55343d5e76c7a844e867804e7534328d
   m_configObjects: {}
