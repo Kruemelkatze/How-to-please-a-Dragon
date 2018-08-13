@@ -13,15 +13,19 @@ public class SceneTransition : MonoBehaviour
     public bool Transitioning;
     public float Duration = 0.7f;
 
-    // Use this for initialization
-    void Start()
+    public float MinTimeOnScreen;
+    private float _screenLoadTimestamp;
+
+    private void Start()
     {
+        _screenLoadTimestamp = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Transitioning && Input.GetKeyDown(KeyCode.Space))
+        if (!Transitioning && Input.GetKeyDown(KeyCode.Space) &&
+            (Time.time - _screenLoadTimestamp) >= MinTimeOnScreen)
         {
             Transitioning = true;
             TransitionToScene(NextSceneIndex, Duration);
