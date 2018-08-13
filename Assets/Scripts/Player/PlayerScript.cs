@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : SceneSingleton<PlayerScript>
 {
     public GameObject ThrowStuff;
-    public GameObject Shovel;
+    public ShovelScript Shovel;
     public ParticleSystem DeflectedGold;
     public int shovelSoundCount = 4;
     public Animator Animator;
@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        Animator.SetInteger("ShovelUpgrade", 0);
     }
 
     // Update is called once per frame
@@ -36,12 +37,17 @@ public class PlayerScript : MonoBehaviour
                 Throw();
             }
         }
+    }
 
+    public void UpgradeShovel(int upgrade)
+    {
+        upgrade = Shovel.UpgradeShovel(upgrade);
+        Animator.SetInteger("ShovelUpgrade", upgrade);
     }
 
     private void Throw()
     {
-        var ShovelAmount = ShovelScript.Instance.ShovelAmount;
+        var ShovelAmount = Shovel.ShovelAmount;
         var addAmount = Pile.Instance.Subtract(ShovelAmount);
         
         if (addAmount > 0)

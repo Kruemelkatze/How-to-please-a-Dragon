@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &132740669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114751305407003140, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    type: 2}
+  m_PrefabInternal: {fileID: 1198378590}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 --- !u!1001 &213300686
 Prefab:
   m_ObjectHideFlags: 0
@@ -162,7 +168,7 @@ Prefab:
         type: 2}
       propertyPath: RageDebugText
       value: 
-      objectReference: {fileID: 1198378596}
+      objectReference: {fileID: 132740669}
     - target: {fileID: 114905931126239250, guid: 2e0c2649e4b0a074d9baaef925df850f,
         type: 2}
       propertyPath: DragonMessagePanel
@@ -285,6 +291,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4228497440449456, guid: 49bb0141275b84842a7d79a6dae02b94,
     type: 2}
   m_PrefabInternal: {fileID: 797737870}
+--- !u!114 &965941267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114690357368149132, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    type: 2}
+  m_PrefabInternal: {fileID: 1198378590}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1198378590
 Prefab:
   m_ObjectHideFlags: 0
@@ -324,36 +336,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114841067951211426, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -364,41 +346,14 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114490584373784396, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 9e55fb55ce84f8544a6360fd9febfe8f,
-        type: 2}
-    - target: {fileID: 114490584373784396, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    - target: {fileID: 114751305407003140, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114490584373784396, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    - target: {fileID: 114751305407003140, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114925187755044380, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 78288aae793f3014383f579d4ed681ca,
-        type: 2}
-    - target: {fileID: 114925187755044380, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114925187755044380, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114490584373784396, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
-        type: 2}
-      propertyPath: m_enableAutoSizing
+      propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -524,6 +479,12 @@ Prefab:
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 797737871}
+    - target: {fileID: 114462871088962108, guid: ba2fb1f90fad01e458cf56c7b2956b99,
+        type: 2}
+      propertyPath: Shovel
+      value: 
+      objectReference: {fileID: 114549060408431166, guid: 2f0301aceb57a21469b75bec9de27bd3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2fb1f90fad01e458cf56c7b2956b99, type: 2}
   m_IsPrefabAsset: 0
@@ -566,6 +527,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114799771823960116, guid: bd6ada728491dbb4daa9c7901cc91164,
+        type: 2}
+      propertyPath: HighscoreText
+      value: 
+      objectReference: {fileID: 1198378596}
     - target: {fileID: 114621568048952106, guid: bd6ada728491dbb4daa9c7901cc91164,
         type: 2}
       propertyPath: PanelAnimation
@@ -586,6 +552,11 @@ Prefab:
       propertyPath: RageIncreaseText
       value: 
       objectReference: {fileID: 1198378591}
+    - target: {fileID: 114621568048952106, guid: bd6ada728491dbb4daa9c7901cc91164,
+        type: 2}
+      propertyPath: RageImage
+      value: 
+      objectReference: {fileID: 965941267}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd6ada728491dbb4daa9c7901cc91164, type: 2}
   m_IsPrefabAsset: 0
