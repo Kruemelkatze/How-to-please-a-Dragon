@@ -58,6 +58,7 @@ MonoBehaviour:
   ItemNameText: {fileID: 0}
   ItemDescriptionText: {fileID: 0}
   RageIncreaseText: {fileID: 0}
+  RageImage: {fileID: 0}
   StopTimeOnModal: 0
   RageIncreaseTexts:
   - If I take this, the dragon will hardly notice.
@@ -67,6 +68,10 @@ MonoBehaviour:
   - {r: 0.5647059, g: 0.34901962, b: 0.1254902, a: 1}
   - {r: 0.35686275, g: 0.21960784, b: 0.09803922, a: 1}
   - {r: 0.7058824, g: 0.11764706, b: 0.14117648, a: 1}
+  RageLevelSprites:
+  - {fileID: 21300000, guid: a710f55ddc53ac944baa07cfa7af0f95, type: 3}
+  - {fileID: 21300000, guid: 07b6e405abe585148a477e86c81ced63, type: 3}
+  - {fileID: 21300000, guid: 6c73b3407d93981408c68e086f3ff29c, type: 3}
   LevelColors:
   - {r: 0, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}

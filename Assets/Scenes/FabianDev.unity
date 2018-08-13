@@ -321,12 +321,42 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114268577421175552, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114751305407003140, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114751305407003140, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071271377207788, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -344,6 +374,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &924869821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114690357368149132, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
+    type: 2}
+  m_PrefabInternal: {fileID: 912063256}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &939928650 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114637157922641284, guid: e3eb7b6e1c3a9d543a5a0c0675a8e683,
@@ -471,6 +507,11 @@ Prefab:
       propertyPath: RageIncreaseText
       value: 
       objectReference: {fileID: 567184051}
+    - target: {fileID: 114621568048952106, guid: bd6ada728491dbb4daa9c7901cc91164,
+        type: 2}
+      propertyPath: RageImage
+      value: 
+      objectReference: {fileID: 924869821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd6ada728491dbb4daa9c7901cc91164, type: 2}
   m_IsPrefabAsset: 0
