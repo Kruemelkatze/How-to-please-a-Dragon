@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114657372704840776}
   - component: {fileID: 114713692487674378}
   - component: {fileID: 114621568048952106}
+  - component: {fileID: 114799771823960116}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -128,3 +129,16 @@ MonoBehaviour:
   DragonCanCarry: 1
   DecreaseRage: 1
   DefaultPlayerActionsActive: 1
+--- !u!114 &114799771823960116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389602191797870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd1b3653e58f6d4a958cc3a372dfdb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 0
+  HighscoreText: {fileID: 0}

@@ -134,18 +134,32 @@ public class LootManager : SceneSingleton<LootManager>
             case ItemType.ShelfUpgrade:
                 var shelfIndex = GetUpgradeIndex(item);
                 if (shelfIndex >= 0)
+                {
                     ShelfManager.Instance.UpgradeShelf(shelfIndex, item.Level);
+                    AudioControl.Instance.PlaySound("item_upgrade");
+                }
                 else
+                {
+                    Highscore.Instance.Add((int) (item.RageIncrease * 10));
                     Debug.Log("Shelf Highscore Increase"); //TODO: Improve Highscore
+                }
+
                 break;
             case ItemType.ShovelUpgrade:
                 if (ShovelScript.Instance.ShovelUpgrade < item.Level)
+                {
                     ShovelScript.Instance.UpgradeShovel(item.Level);
+                    AudioControl.Instance.PlaySound("item_upgrade");
+                }
                 else
+                {
                     Debug.Log("Shovel Highscore Increase"); //TODO: Improve Highscore
+                    Highscore.Instance.Add((int) (item.RageIncrease * 10));
+                }
                 break;
             case ItemType.Misc:
                 Debug.Log("Misc Highscore Increase"); //TODO: Improve Highscore
+                Highscore.Instance.Add((int) (item.RageIncrease * 10));
                 break;
         }
 

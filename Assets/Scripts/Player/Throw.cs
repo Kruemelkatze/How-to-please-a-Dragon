@@ -59,6 +59,8 @@ public class Throw : MonoBehaviour
             var backAmount = ShelfManager.Instance.Add(Amount, TargetShelf);
             if (backAmount > 0)
                 Pile.Instance.Add(backAmount);
+            
+            Highscore.Instance.Add(Amount - backAmount);
 
             // Pick a random sound for the coins dropping into the shelf
             String coindropSound = "coindrop" + UnityEngine.Random.Range(1, CoindropSoundCount + 1);
