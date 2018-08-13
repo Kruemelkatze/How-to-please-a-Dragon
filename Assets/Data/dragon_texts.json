@@ -1,23 +1,23 @@
 {
     "Friendly": [
-        "Oh, you so shiny. I'll eat you last.",
-        "It was a good idea to kidna.. hire you.",
+        "Look, i pillaged a Victoria's secret shop for this. Does it fit me?",
         "You shovel well, my human friend.",
+        "Oh, you so shiny. I will eat you last.",
         "Honest human, you don't steal.",
-        "You look hobbity - good."
+        "You look hobbity good."
     ],
     "Normal": [
-        "Keep working, do not let me down.",
-        "I tell you, I'm an honest dragon.",
-        "Could have sworn there was a crown between all this gold",
-        "Afrain from stealing my stuff, human",
-        "Never laugh at live dragons, I am serious!"
+        "Be careful. I had to kill 13 dwarves and a hobbit for this.",
+        "Afrain from stealing my stuff, human.",
+        "You look like a shoveling knight. Don not try anything strange.",
+        "Pillaging, burning and killing is honest work.",
+        "Never laugh at a living dragon, I am serious!",
+        "Wörk, wörk, wörk."
     ],
     "Angry": [
-        "Grahhhhh!",
+        "Could have sworn there was a crown between all this gold",
         "I'll let you live. For now...",
-        "You worm, I'll swallow you!",
         "You are testing my patience!",
-        "Come not between the dragon, and his wrath."
+        "I see you lootin', I hatin'."
     ]
 }
