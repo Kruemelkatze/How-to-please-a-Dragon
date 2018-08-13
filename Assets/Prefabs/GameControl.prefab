@@ -124,7 +124,7 @@ MonoBehaviour:
   MusicClips:
     values:
     - name: background_game
-      value: {fileID: 8300000, guid: ed298ce94b4ddc84db17a5f4b75e4120, type: 3}
+      value: {fileID: 8300000, guid: c7224a3a3d0ef984fa5e9304394779b3, type: 3}
   DefaultMusic: 0
   IgnoreDuplicateMusic: 1
 --- !u!114 &114713692487674378
