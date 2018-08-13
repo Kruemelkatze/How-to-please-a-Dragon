@@ -115,6 +115,12 @@ MonoBehaviour:
       value: {fileID: 8300000, guid: 826e42cd1b008fb49b788f68e08dd19a, type: 3}
     - name: item_upgrade
       value: {fileID: 8300000, guid: 55036ffa596697243a0d3de8319dbaae, type: 3}
+    - name: dragon_voice0
+      value: {fileID: 8300000, guid: 0004718a371d42941b39588bbfd39d85, type: 3}
+    - name: dragon_voice1
+      value: {fileID: 8300000, guid: b8d960f926e7b2b4ba02f6dfa438994c, type: 3}
+    - name: dragon_voice2
+      value: {fileID: 8300000, guid: df682a322d3a4004e9d03321d86b9f3b, type: 3}
   MusicClips:
     values: []
   DefaultMusic: 

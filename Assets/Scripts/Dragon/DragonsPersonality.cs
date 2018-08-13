@@ -22,6 +22,10 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
 
     public float DragonMessageDisplayTime = 4;
 
+
+    private int LastSample = 0;
+    public int DragonVoiceSampleCount = 3;
+
     void Awake()
     {
         SetInstance();
@@ -110,6 +114,11 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
         var message = GetRandomText();
         var anim = DragonMessagePanel.GetComponent<Animation>();
         anim.Play();
+
+        // Play voice sound
+        LastSample = (LastSample + 1) % DragonVoiceSampleCount;
+        String dragonVoiceSample = String.Concat("dragon_voice", LastSample);
+        AudioControl.Instance.PlaySound(dragonVoiceSample, 0.1f);
 
         TextMeshProUGUI currentText;
         var textWrapper = DragonMessagePanel.transform.Find("Texts");
