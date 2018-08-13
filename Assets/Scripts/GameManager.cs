@@ -15,6 +15,11 @@ public class GameManager : SceneSingleton<GameManager>
     public int PileDeathSceneIndex = -1;
     public int DragonDeathSceneIndex = -1;
 
+    private void Awake()
+    {
+        Cursor.visible = false;
+    }
+
     // Use this for initialization
     void Start()
     {
