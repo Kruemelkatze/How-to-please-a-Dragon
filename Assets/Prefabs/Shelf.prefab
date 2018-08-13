@@ -201,6 +201,8 @@ MonoBehaviour:
   Frame: {fileID: 212568272556495106}
   Filling: {fileID: 212466909395430922}
   Background: {fileID: 212835535548447106}
+  FullBurst: {fileID: 0}
+  FullyUpgraded: {fileID: 0}
   CurrentAmount: 0
   MaxHeightOffset: 7.2
   SmoothTime: 0.3
@@ -265,7 +267,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3c9ca9ced8fab7347b9a7d7f2a38e2f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,7 +313,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3c9ca9ced8fab7347b9a7d7f2a38e2f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
