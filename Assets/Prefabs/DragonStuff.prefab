@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 2000
-  AvgPeriod: 30
+  AvgPeriod: 12.5
   RandomPeriodDeviation: 5
   Dimmer: {fileID: 114227586512981190}
   DimmerTimeValue: 0.4
