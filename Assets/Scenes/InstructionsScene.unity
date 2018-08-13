@@ -488,10 +488,10 @@ RectTransform:
   m_Father: {fileID: 914981807}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 480, y: -29.49997}
-  m_SizeDelta: {x: -329, y: 300}
+  m_AnchoredPosition: {x: -480, y: 180}
+  m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902944866
 MonoBehaviour:
@@ -593,7 +593,7 @@ MonoBehaviour:
     spaceCount: 43
     wordCount: 40
     linkCount: 0
-    lineCount: 5
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
