@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -43,7 +44,10 @@ public class LootManager : SceneSingleton<LootManager>
 
     public void AcceptLoot()
     {
-        Debug.Log("Accepted Loot " + JsonUtility.ToJson(Pile.Instance.ContainedLoot));
+        var item = Pile.Instance.ContainedLoot;
+        Debug.Log("Accepted Loot " + JsonUtility.ToJson(item));
+        HandleAcceptedItem(item);
+
         Pile.Instance.ContainedLoot = null;
         HideModal();
     }
@@ -118,7 +122,57 @@ public class LootManager : SceneSingleton<LootManager>
             Time.timeScale = 1;
 
         PanelAnimation.Play("LootModal_out");
-        
+
         GameManager.Instance.ModalFocus(false);
+    }
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~ UPGRADING ~~~~~~~~~~~~~~~~~~~~~~~~
+    private void HandleAcceptedItem(ItemDefinition item)
+    {
+        switch (item.ItemType)
+        {
+            case ItemType.ShelfUpgrade:
+                var shelfIndex = GetUpgradeIndex(item);
+                if (shelfIndex >= 0)
+                    ShelfManager.Instance.UpgradeShelf(shelfIndex, item.Level);
+                else
+                    Debug.Log("Shelf Highscore Increase"); //TODO: Improve Highscore
+                break;
+            case ItemType.ShovelUpgrade:
+                if (ShovelScript.Instance.ShovelUpgrade < item.Level)
+                    ShovelScript.Instance.UpgradeShovel(item.Level);
+                else
+                    Debug.Log("Shovel Highscore Increase"); //TODO: Improve Highscore
+                break;
+            case ItemType.Misc:
+                Debug.Log("Misc Highscore Increase"); //TODO: Improve Highscore
+                break;
+        }
+
+        DragonsPersonality.Instance.AddRage(item.RageIncrease);
+    }
+
+    private int GetUpgradeIndex(ItemDefinition item)
+    {
+        var manager = ShelfManager.Instance;
+        // If current is applicable
+        if (manager.Selected.Shelf.Level < item.Level)
+        {
+            return manager.SelectedIndex;
+        }
+
+        // Else: Get one of the shelves
+        for (int i = 0; i < manager.Shelves.Count; i++)
+        {
+            var j = (manager.SelectedIndex + i) % manager.Shelves.Count;
+            var shelfDisplay = manager.Shelves[i];
+            if (shelfDisplay.Shelf.Level < item.Level)
+            {
+                return i;
+            }
+        }
+
+        // None fits? -1 for highscore
+        return -1;
     }
 }
