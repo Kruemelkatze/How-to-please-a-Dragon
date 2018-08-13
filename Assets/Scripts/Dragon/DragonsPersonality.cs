@@ -77,7 +77,7 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
         {
             Rage = Math.Max(0, Rage - RageDecreasePerSecond * Time.deltaTime);
         }
-        
+
         if (_debug && RageDebugText != null)
         {
             RageDebugText.text = $"Rage: {Rage}";
@@ -142,9 +142,9 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
 
 public enum DragonMood
 {
-    Friendly,
-    Normal,
-    Angry
+    Friendly = 0,
+    Normal = 1,
+    Angry = 2
 }
 
 [System.Serializable]

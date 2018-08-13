@@ -2,6 +2,7 @@
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LootManager : SceneSingleton<LootManager>
 {
@@ -10,11 +11,13 @@ public class LootManager : SceneSingleton<LootManager>
     public TextMeshProUGUI ItemNameText;
     public TextMeshProUGUI ItemDescriptionText;
     public TextMeshProUGUI RageIncreaseText;
+    public Image RageImage;
 
     public bool StopTimeOnModal;
 
     public string[] RageIncreaseTexts = new string[3];
     public Color[] RageIncreaseColors = new Color[3];
+    public Sprite[] RageLevelSprites = new Sprite[3];
     public Color[] LevelColors = new Color[5];
 
     // Use this for initialization
@@ -28,6 +31,9 @@ public class LootManager : SceneSingleton<LootManager>
     {
         if (!GameManager.Instance.DefaultPlayerActionsActive)
         {
+            var mood = DragonsPersonality.Instance.Mood;
+            RageImage.sprite = RageLevelSprites[(int) mood];
+            
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 AcceptLoot();
@@ -134,18 +140,33 @@ public class LootManager : SceneSingleton<LootManager>
             case ItemType.ShelfUpgrade:
                 var shelfIndex = GetUpgradeIndex(item);
                 if (shelfIndex >= 0)
+                {
                     ShelfManager.Instance.UpgradeShelf(shelfIndex, item.Level);
+                    AudioControl.Instance.PlaySound("item_upgrade");
+                }
                 else
+                {
+                    Highscore.Instance.Add((int) (item.RageIncrease * 10));
                     Debug.Log("Shelf Highscore Increase"); //TODO: Improve Highscore
+                }
+
                 break;
             case ItemType.ShovelUpgrade:
                 if (ShovelScript.Instance.ShovelUpgrade < item.Level)
+                {
                     ShovelScript.Instance.UpgradeShovel(item.Level);
+                    AudioControl.Instance.PlaySound("item_upgrade");
+                }
                 else
+                {
                     Debug.Log("Shovel Highscore Increase"); //TODO: Improve Highscore
+                    Highscore.Instance.Add((int) (item.RageIncrease * 10));
+                }
+
                 break;
             case ItemType.Misc:
                 Debug.Log("Misc Highscore Increase"); //TODO: Improve Highscore
+                Highscore.Instance.Add((int) (item.RageIncrease * 10));
                 break;
         }
 
