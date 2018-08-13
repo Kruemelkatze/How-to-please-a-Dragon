@@ -14,7 +14,7 @@ public class PlayerScript : SceneSingleton<PlayerScript>
 
     void Start()
     {
-        Animator.SetInteger("ShovelUpgrade", 0);
+        UpgradeShovel(0);
     }
 
     // Update is called once per frame

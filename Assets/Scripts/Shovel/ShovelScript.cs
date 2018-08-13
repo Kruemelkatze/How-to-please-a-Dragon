@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShovelScript : SceneSingleton<ShovelScript>
 {
-    public int ShovelAmount = 0;
+    public int ShovelAmount = 50;
 
     public SpriteRenderer Shovel;
     
@@ -20,12 +20,11 @@ public class ShovelScript : SceneSingleton<ShovelScript>
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public int UpgradeShovel(int level)
     {
-//        level = Math.Max(level, ShovelUpgrade);
+        level = Math.Max(level, ShovelUpgrade);
         ShovelUpgrade = level > 2 ? 2 : level;
         setAmount();
 

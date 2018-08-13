@@ -152,7 +152,7 @@ public class LootManager : SceneSingleton<LootManager>
 
                 break;
             case ItemType.ShovelUpgrade:
-                if (ShovelScript.Instance.ShovelUpgrade < item.Level)
+                if (PlayerScript.Instance.Shovel.ShovelUpgrade < item.Level)
                 {
                     PlayerScript.Instance.UpgradeShovel(item.Level);
                     AudioControl.Instance.PlaySound("item_upgrade");
