@@ -22,7 +22,7 @@ public class ShovelScript : SceneSingleton<ShovelScript>
         
     }
 
-    void UpgradeShovel(int level)
+    public void UpgradeShovel(int level)
     {
         level = Math.Max(level, ShovelUpgrade);
         ShovelUpgrade = level > 2 ? 2 : level;

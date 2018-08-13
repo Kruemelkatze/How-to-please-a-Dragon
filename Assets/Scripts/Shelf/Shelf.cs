@@ -12,6 +12,8 @@ namespace Assets.Scripts.Shelf
 		public Sprite Frame;
 		public Sprite Filling;
 		public Sprite Background;
+
+		public int Level;
 		
 		public void PrintInfo()
 		{

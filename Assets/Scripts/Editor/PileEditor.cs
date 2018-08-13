@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 using UnityEditor;
 
 [CustomEditor(typeof(Pile))]
 public class PileEditor : Editor
 {
     private static int _amount = 200;
-
+    private static string _item;
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -25,6 +26,18 @@ public class PileEditor : Editor
         {
             var actualSubtracted = myScript.Subtract(_amount);
             Debug.Log("Subtracted " + actualSubtracted);
+        }
+
+
+        _item = EditorGUILayout.TextField("Loot Id", _item);
+           
+        if (GUILayout.Button("Set Loot"))
+        {
+            var loot = LootDropper.Instance.ItemDefinitions.FirstOrDefault(x => x.Id == _item);
+            if (loot != null)
+            {
+                myScript.SetLoot(loot);
+            }
         }
         
         if (GUILayout.Button("Set Random Loot"))

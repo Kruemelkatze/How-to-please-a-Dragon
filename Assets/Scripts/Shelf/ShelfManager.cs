@@ -12,17 +12,19 @@ public class ShelfManager : SceneSingleton<ShelfManager>
     public SpriteRenderer Selection;
     private Vector3 selectionPosition;
 
-    private int SelectedIndex;
+    private int _selectedIndex;
 
     public List<ShelfDisplay> Shelves;
 
+    public int SelectedIndex => _selectedIndex;
+    
     // Use this for initialization
     void Start()
     {
-        SelectedIndex = 0;
+        _selectedIndex = 0;
         if (Shelves.Count > 0)
         {
-            Selected = Shelves[SelectedIndex];
+            Selected = Shelves[_selectedIndex];
             Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }
@@ -62,18 +64,18 @@ public class ShelfManager : SceneSingleton<ShelfManager>
 
     public void SelectLeft()
     {
-        if (SelectedIndex > 0)
+        if (_selectedIndex > 0)
         {
-            Selected = Shelves[--SelectedIndex];
+            Selected = Shelves[--_selectedIndex];
             Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }
 
     public void SelectRight()
     {
-        if (SelectedIndex < Shelves.Count - 1)
+        if (_selectedIndex < Shelves.Count - 1)
         {
-            Selected = Shelves[++SelectedIndex];
+            Selected = Shelves[++_selectedIndex];
             Selection.transform.position = Selected.Frame.transform.position + new Vector3(0, -0.24F, 0);
         }
     }

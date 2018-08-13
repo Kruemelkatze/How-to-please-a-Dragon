@@ -76,11 +76,11 @@ public class DragonsPersonality : SceneSingleton<DragonsPersonality>
         if (GameManager.Instance.DecreaseRage)
         {
             Rage = Math.Max(0, Rage - RageDecreasePerSecond * Time.deltaTime);
-
-            if (_debug && RageDebugText != null)
-            {
-                RageDebugText.text = $"Rage: {Rage}";
-            }
+        }
+        
+        if (_debug && RageDebugText != null)
+        {
+            RageDebugText.text = $"Rage: {Rage}";
         }
     }
 
