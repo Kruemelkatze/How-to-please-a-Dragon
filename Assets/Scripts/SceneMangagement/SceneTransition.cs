@@ -30,6 +30,11 @@ public class SceneTransition : MonoBehaviour
             Transitioning = true;
             TransitionToScene(NextSceneIndex, Duration);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public static void TransitionToScene(int sceneIndex, float duration = 0.7f)
