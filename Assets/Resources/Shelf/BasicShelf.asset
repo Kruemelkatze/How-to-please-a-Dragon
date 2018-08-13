@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: BasicShelf
   m_EditorClassIdentifier: 
   ShelfName: BasicShelf
-  TotalAmount: 1250
+  TotalAmount: 1750
   Frame: {fileID: 21300000, guid: f967c8795f4a49049a09cd693ba2bd16, type: 3}
   Filling: {fileID: 21300000, guid: 485091f027944e840b3946679bcc5236, type: 3}
   Background: {fileID: 21300000, guid: 74d42fa2682a67e4ab62d6327720d653, type: 3}

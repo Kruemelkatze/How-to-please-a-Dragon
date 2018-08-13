@@ -607,7 +607,7 @@ MonoBehaviour:
   ShovelAmount: 0
   Shovel: {fileID: 212239689061104586}
   ShovelUpgrade: 0
-  AmountMap: 280000005a000000b4000000
+  AmountMap: 1e0000004600000096000000
 --- !u!114 &114462871088962108
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ using Random = System.Random;
 public class Dragon : SceneSingleton<Dragon>
 {
     public int Amount = 2000;
-    public float AvgPeriod = 12.5F;
+    public float AvgPeriod = 8F;
     public float RandomPeriodDeviation = 2.5F;
 
     public Dimmer Dimmer;
