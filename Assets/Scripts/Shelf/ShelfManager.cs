@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Shelf;
@@ -109,4 +110,9 @@ public class ShelfManager : SceneSingleton<ShelfManager>
             }
         }
     }
+
+    public double LevelShelfesFull()
+    {
+        return Shelves.Average(x => x.FillingPercentage);
+     }
 }
