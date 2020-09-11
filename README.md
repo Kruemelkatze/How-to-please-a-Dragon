@@ -10,10 +10,8 @@ Made for the [Ludum Dare #42](https://ldjam.com/) game jam.
 
 ### [Download Executable](./Releases)
 
-<img width="400" alt="Screenshot 1" src="Images/start_screen.webp"/> 
-<img width="400" alt="Screenshot 2" src="Images/instructions.webp"/> 
-<img width="400" alt="Screenshot 2" src="Images/1_game.webp"/> 
-<img width="400" alt="Screenshot 3" src="Images/2_game2_screen.webp"/>
+<img width="400" alt="Screenshot 1" src="Images/start_screen.webp"/> <img width="400" alt="Screenshot 2" src="Images/instructions.webp"/> 
+<img width="400" alt="Screenshot 2" src="Images/1_game.webp"/> <img width="400" alt="Screenshot 3" src="Images/2_game2_screen.webp"/>
 
 ---
 
